@@ -77,10 +77,6 @@ public class AshLayerBlock extends Block {
     }
 
     public boolean canReplace(BlockState state, ItemPlacementContext context) {
-        if (context.canReplaceExisting()) {
-            return context.getSide() == Direction.UP;
-        } else {
-            return true;
-        }
+        return true;
     }
 }

@@ -79,11 +79,6 @@ public final class CinderscapesConfiguredFeatures {
     public static final RegistryKey<ConfiguredFeature<?, ?>> FLOOR_SHARD_ROSE_QUARTZ = createRegistryKey("quartz_cavern/floor_shard_rose_quartz");
     public static final RegistryKey<ConfiguredFeature<?, ?>> FLOOR_SHARD_SMOKY_QUARTZ = createRegistryKey("quartz_cavern/floor_shard_smoky_quartz");
 
-    public static final RegistryKey<ConfiguredFeature<?, ?>> POLYPITE_QUARTZ = createRegistryKey("quartz_cavern/polypite_quartz");
-    public static final RegistryKey<ConfiguredFeature<?, ?>> POLYPITE_SULFUR_QUARTZ = createRegistryKey("quartz_cavern/polypite_sulfur_quartz");
-    public static final RegistryKey<ConfiguredFeature<?, ?>> POLYPITE_ROSE_QUARTZ = createRegistryKey("quartz_cavern/polypite_rose_quartz");
-    public static final RegistryKey<ConfiguredFeature<?, ?>> POLYPITE_SMOKY_QUARTZ = createRegistryKey("quartz_cavern/polypite_smoky_quartz");
-
     public static void populate(FabricDynamicRegistryProvider.Entries entries) {
         /* ASHY SHOALS */
         entries.add(DEBRIS_ORE_LARGE, configureFeature(Feature.ORE, new OreFeatureConfig(List.of(OreFeatureConfig.createTarget(RULE_TEST_BASE_STONE_NETHER, Blocks.ANCIENT_DEBRIS.getDefaultState())), 3, 1.0f)));
@@ -150,11 +145,6 @@ public final class CinderscapesConfiguredFeatures {
         entries.add(FLOOR_SHARD_SULFUR_QUARTZ, configureFeature(CinderscapesFeatures.CRYSTAL_SHARD_FEATURE, new CrystalShardFeatureConfig(CinderscapesBlocks.CRYSTALLINE_SULFUR_QUARTZ.getDefaultState(), Direction.UP, SHARD_WHITELIST)));
         entries.add(FLOOR_SHARD_ROSE_QUARTZ, configureFeature(CinderscapesFeatures.CRYSTAL_SHARD_FEATURE, new CrystalShardFeatureConfig(CinderscapesBlocks.CRYSTALLINE_ROSE_QUARTZ.getDefaultState(), Direction.UP, SHARD_WHITELIST)));
         entries.add(FLOOR_SHARD_SMOKY_QUARTZ, configureFeature(CinderscapesFeatures.CRYSTAL_SHARD_FEATURE, new CrystalShardFeatureConfig(CinderscapesBlocks.CRYSTALLINE_SMOKY_QUARTZ.getDefaultState(), Direction.UP, SHARD_WHITELIST)));
-
-        entries.add(POLYPITE_QUARTZ, configurePolypiteQuartz((PolypiteQuartzBlock) CinderscapesBlocks.POLYPITE_QUARTZ));
-        entries.add(POLYPITE_SULFUR_QUARTZ, configurePolypiteQuartz((PolypiteQuartzBlock) CinderscapesBlocks.POLYPITE_SULFUR_QUARTZ));
-        entries.add(POLYPITE_ROSE_QUARTZ, configurePolypiteQuartz((PolypiteQuartzBlock) CinderscapesBlocks.POLYPITE_ROSE_QUARTZ));
-        entries.add(POLYPITE_SMOKY_QUARTZ, configurePolypiteQuartz((PolypiteQuartzBlock) CinderscapesBlocks.POLYPITE_SMOKY_QUARTZ));
     }
 
     private static ConfiguredFeature<PolypiteQuartzFeatureConfig, ?> configurePolypiteQuartz(PolypiteQuartzBlock block) {

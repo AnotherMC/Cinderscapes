@@ -46,17 +46,11 @@ public class CinderscapesBlockLootTableProvider extends FabricBlockLootTableProv
 		addDrop(CinderscapesBlocks.CRYSTINIUM);
 		addDrop(CinderscapesBlocks.GHASTLY_ECTOPLASM, VanillaBlockLootTableGenerator::dropsWithShears);
 		addDrop(CinderscapesBlocks.PHOTOFERN, VanillaBlockLootTableGenerator::dropsWithShears);
-		addDrop(CinderscapesBlocks.POLYPITE_QUARTZ, block -> oreDrops(block, Items.QUARTZ));
-		addDrop(CinderscapesBlocks.POLYPITE_ROSE_QUARTZ, block -> oreDrops(block, CinderscapesItems.ROSE_QUARTZ));
-		addDrop(CinderscapesBlocks.POLYPITE_SMOKY_QUARTZ, block -> oreDrops(block, CinderscapesItems.SMOKY_QUARTZ));
-		addDrop(CinderscapesBlocks.POLYPITE_SULFUR_QUARTZ, block -> oreDrops(block, CinderscapesItems.SULFUR_QUARTZ));
 		addDrop(CinderscapesBlocks.PYRACINTH);
 		addDrop(CinderscapesBlocks.ROSE_QUARTZ_BLOCK);
 		addDrop(CinderscapesBlocks.ROSE_QUARTZ_BRICKS);
 		addDrop(CinderscapesBlocks.ROSE_QUARTZ_ORE, block -> oreDrops(block, CinderscapesItems.ROSE_QUARTZ));
 		addDrop(CinderscapesBlocks.ROSE_QUARTZ_PILLAR);
-		addDrop(CinderscapesBlocks.ROSE_QUARTZ_SLAB, this::slabDrops);
-		addDrop(CinderscapesBlocks.ROSE_QUARTZ_STAIRS);
 		addDrop(CinderscapesBlocks.SCORCHED_SHRUB, VanillaBlockLootTableGenerator::dropsWithShears);
 		addDrop(CinderscapesBlocks.SCORCHED_SPROUTS, VanillaBlockLootTableGenerator::dropsWithShears);
 		addDrop(CinderscapesBlocks.SCORCHED_TENDRILS);
@@ -64,25 +58,15 @@ public class CinderscapesBlockLootTableProvider extends FabricBlockLootTableProv
 		addDrop(CinderscapesBlocks.SMOKY_QUARTZ_BRICKS);
 		addDrop(CinderscapesBlocks.SMOKY_QUARTZ_ORE, block -> oreDrops(block, CinderscapesItems.SMOKY_QUARTZ));
 		addDrop(CinderscapesBlocks.SMOKY_QUARTZ_PILLAR);
-		addDrop(CinderscapesBlocks.SMOKY_QUARTZ_SLAB, this::slabDrops);
-		addDrop(CinderscapesBlocks.SMOKY_QUARTZ_STAIRS);
 		addDrop(CinderscapesBlocks.SMOOTH_ROSE_QUARTZ);
-		addDrop(CinderscapesBlocks.SMOOTH_ROSE_QUARTZ_SLAB, this::slabDrops);
-		addDrop(CinderscapesBlocks.SMOOTH_ROSE_QUARTZ_STAIRS);
 		addDrop(CinderscapesBlocks.SMOOTH_SMOKY_QUARTZ);
-		addDrop(CinderscapesBlocks.SMOOTH_SMOKY_QUARTZ_SLAB, this::slabDrops);
-		addDrop(CinderscapesBlocks.SMOOTH_SMOKY_QUARTZ_STAIRS);
 		addDrop(CinderscapesBlocks.SMOOTH_SULFUR_QUARTZ);
-		addDrop(CinderscapesBlocks.SMOOTH_SULFUR_QUARTZ_SLAB, this::slabDrops);
-		addDrop(CinderscapesBlocks.SMOOTH_SULFUR_QUARTZ_STAIRS);
 		addDrop(CinderscapesBlocks.SULFUR_BLOCK);
 		addDrop(CinderscapesBlocks.SULFUR_ORE, block -> oreDrops(block, CinderscapesItems.SULFUR));
 		addDrop(CinderscapesBlocks.SULFUR_QUARTZ_BLOCK);
 		addDrop(CinderscapesBlocks.SULFUR_QUARTZ_BRICKS);
 		addDrop(CinderscapesBlocks.SULFUR_QUARTZ_ORE, block -> oreDrops(block, CinderscapesItems.SULFUR_QUARTZ));
 		addDrop(CinderscapesBlocks.SULFUR_QUARTZ_PILLAR);
-		addDrop(CinderscapesBlocks.SULFUR_QUARTZ_SLAB, this::slabDrops);
-		addDrop(CinderscapesBlocks.SULFUR_QUARTZ_STAIRS);
 		addDrop(CinderscapesBlocks.TWILIGHT_FESCUES, VanillaBlockLootTableGenerator::dropsWithShears);
 		addDrop(CinderscapesBlocks.TWILIGHT_TENDRILS);
 		addDrop(CinderscapesBlocks.TWILIGHT_VINE_BLOCK);
@@ -94,40 +78,14 @@ public class CinderscapesBlockLootTableProvider extends FabricBlockLootTableProv
 
 		// wood building blocks
 		// TODO: Consider bringing over the WoodBlocks interface from Terrestria
-		addDrop(CinderscapesBlocks.SCORCHED_BUTTON);
-		addDrop(CinderscapesBlocks.SCORCHED_DOOR, this::doorDrops);
-		addDrop(CinderscapesBlocks.SCORCHED_FENCE);
-		addDrop(CinderscapesBlocks.SCORCHED_FENCE_GATE);
-		addDrop(CinderscapesBlocks.SCORCHED_HANGING_SIGN);
 		addDrop(CinderscapesBlocks.SCORCHED_HYPHAE);
-		addDrop(CinderscapesBlocks.SCORCHED_PLANKS);
-		addDrop(CinderscapesBlocks.SCORCHED_PRESSURE_PLATE);
-		addDrop(CinderscapesBlocks.SCORCHED_SIGN);
-		addDrop(CinderscapesBlocks.SCORCHED_SLAB, this::slabDrops);
-		addDrop(CinderscapesBlocks.SCORCHED_STAIRS);
 		addDrop(CinderscapesBlocks.SCORCHED_STEM);
-		addDrop(CinderscapesBlocks.SCORCHED_TRAPDOOR);
-		addDrop(CinderscapesBlocks.SCORCHED_WALL_HANGING_SIGN);
-		addDrop(CinderscapesBlocks.SCORCHED_WALL_SIGN);
 		addDrop(CinderscapesBlocks.STRIPPED_SCORCHED_STEM);
 		addDrop(CinderscapesBlocks.STRIPPED_SCORCHED_HYPHAE);
 
-		addDrop(CinderscapesBlocks.UMBRAL_BUTTON);
-		addDrop(CinderscapesBlocks.UMBRAL_DOOR, this::doorDrops);
-		addDrop(CinderscapesBlocks.UMBRAL_FENCE);
-		addDrop(CinderscapesBlocks.UMBRAL_FENCE_GATE);
 		addDrop(CinderscapesBlocks.UMBRAL_FUNGUS);
-		addDrop(CinderscapesBlocks.UMBRAL_HANGING_SIGN);
 		addDrop(CinderscapesBlocks.UMBRAL_HYPHAE);
-		addDrop(CinderscapesBlocks.UMBRAL_PLANKS);
-		addDrop(CinderscapesBlocks.UMBRAL_PRESSURE_PLATE);
-		addDrop(CinderscapesBlocks.UMBRAL_SIGN);
-		addDrop(CinderscapesBlocks.UMBRAL_SLAB, this::slabDrops);
-		addDrop(CinderscapesBlocks.UMBRAL_STAIRS);
 		addDrop(CinderscapesBlocks.UMBRAL_STEM);
-		addDrop(CinderscapesBlocks.UMBRAL_TRAPDOOR);
-		addDrop(CinderscapesBlocks.UMBRAL_WALL_HANGING_SIGN);
-		addDrop(CinderscapesBlocks.UMBRAL_WALL_SIGN);
 		addDrop(CinderscapesBlocks.STRIPPED_UMBRAL_STEM);
 		addDrop(CinderscapesBlocks.STRIPPED_UMBRAL_HYPHAE);
 
@@ -136,10 +94,6 @@ public class CinderscapesBlockLootTableProvider extends FabricBlockLootTableProv
 		addPottedPlantDrops(CinderscapesBlocks.POTTED_CRYSTINIUM);
 		addPottedPlantDrops(CinderscapesBlocks.POTTED_LUMINOUS_POD);
 		addPottedPlantDrops(CinderscapesBlocks.POTTED_PHOTOFERN);
-		addPottedPlantDrops(CinderscapesBlocks.POTTED_POLYPITE_QUARTZ);
-		addPottedPlantDrops(CinderscapesBlocks.POTTED_POLYPITE_ROSE_QUARTZ);
-		addPottedPlantDrops(CinderscapesBlocks.POTTED_POLYPITE_SMOKY_QUARTZ);
-		addPottedPlantDrops(CinderscapesBlocks.POTTED_POLYPITE_SULFUR_QUARTZ);
 		addPottedPlantDrops(CinderscapesBlocks.POTTED_PYRACINTH);
 		addPottedPlantDrops(CinderscapesBlocks.POTTED_SCORCHED_SHRUB);
 		addPottedPlantDrops(CinderscapesBlocks.POTTED_SCORCHED_TENDRILS);
@@ -166,38 +120,6 @@ public class CinderscapesBlockLootTableProvider extends FabricBlockLootTableProv
 			)
 		));
 
-
-		// multi-layer drops
-		addDrop(CinderscapesBlocks.ASH, block -> LootTable.builder().pool(LootPool.builder().conditionally(
-			EntityPropertiesLootCondition
-				.create(LootContext.EntityTarget.THIS)).with(AlternativeEntry.builder(AlternativeEntry.builder(
-                    ItemEntry.builder(CinderscapesItems.ASH_PILE).conditionally(BlockStatePropertyLootCondition.builder(block).properties(StatePredicate.Builder.create().exactMatch(AshLayerBlock.LAYERS, 1))),
-                	ItemEntry.builder(CinderscapesItems.ASH_PILE).conditionally(BlockStatePropertyLootCondition.builder(block).properties(StatePredicate.Builder.create().exactMatch(AshLayerBlock.LAYERS, 2)))
-                        .apply(SetCountLootFunction.builder(ConstantLootNumberProvider.create(2))),
-                	ItemEntry.builder(CinderscapesItems.ASH_PILE).conditionally(BlockStatePropertyLootCondition.builder(block).properties(StatePredicate.Builder.create().exactMatch(AshLayerBlock.LAYERS, 3)))
-                        .apply(SetCountLootFunction.builder(ConstantLootNumberProvider.create(3))),
-                	ItemEntry.builder(CinderscapesItems.ASH_PILE).conditionally(BlockStatePropertyLootCondition.builder(block).properties(StatePredicate.Builder.create().exactMatch(AshLayerBlock.LAYERS, 4)))
-                        .apply(SetCountLootFunction.builder(ConstantLootNumberProvider.create(4))),
-                	ItemEntry.builder(CinderscapesItems.ASH_PILE).conditionally(BlockStatePropertyLootCondition.builder(block).properties(StatePredicate.Builder.create().exactMatch(AshLayerBlock.LAYERS, 5)))
-                        .apply(SetCountLootFunction.builder(ConstantLootNumberProvider.create(5))),
-                	ItemEntry.builder(CinderscapesItems.ASH_PILE).conditionally(BlockStatePropertyLootCondition.builder(block).properties(StatePredicate.Builder.create().exactMatch(AshLayerBlock.LAYERS, 6)))
-                        .apply(SetCountLootFunction.builder(ConstantLootNumberProvider.create(6))),
-                	ItemEntry.builder(CinderscapesItems.ASH_PILE).conditionally(BlockStatePropertyLootCondition.builder(block).properties(StatePredicate.Builder.create().exactMatch(AshLayerBlock.LAYERS, 7)))
-                        .apply(SetCountLootFunction.builder(ConstantLootNumberProvider.create(7))),
-	                ItemEntry.builder(CinderscapesItems.ASH_PILE).apply(SetCountLootFunction.builder(ConstantLootNumberProvider.create(8)))
-				)
-				.conditionally(MatchToolLootCondition.builder(ItemPredicate.Builder.create().enchantment(new EnchantmentPredicate(Enchantments.SILK_TOUCH, NumberRange.IntRange.atLeast(1)))).invert()),
-                	AlternativeEntry.builder(
-                        ItemEntry.builder(CinderscapesBlocks.ASH).conditionally(BlockStatePropertyLootCondition.builder(block).properties(StatePredicate.Builder.create().exactMatch(AshLayerBlock.LAYERS, 1))),
-                        ItemEntry.builder(CinderscapesBlocks.ASH).apply(SetCountLootFunction.builder(ConstantLootNumberProvider.create(2))).conditionally(BlockStatePropertyLootCondition.builder(block).properties(StatePredicate.Builder.create().exactMatch(AshLayerBlock.LAYERS, 2))),
-                        ItemEntry.builder(CinderscapesBlocks.ASH).apply(SetCountLootFunction.builder(ConstantLootNumberProvider.create(3))).conditionally(BlockStatePropertyLootCondition.builder(block).properties(StatePredicate.Builder.create().exactMatch(AshLayerBlock.LAYERS, 3))),
-                        ItemEntry.builder(CinderscapesBlocks.ASH).apply(SetCountLootFunction.builder(ConstantLootNumberProvider.create(4))).conditionally(BlockStatePropertyLootCondition.builder(block).properties(StatePredicate.Builder.create().exactMatch(AshLayerBlock.LAYERS, 4))),
-                        ItemEntry.builder(CinderscapesBlocks.ASH).apply(SetCountLootFunction.builder(ConstantLootNumberProvider.create(5))).conditionally(BlockStatePropertyLootCondition.builder(block).properties(StatePredicate.Builder.create().exactMatch(AshLayerBlock.LAYERS, 5))),
-                        ItemEntry.builder(CinderscapesBlocks.ASH).apply(SetCountLootFunction.builder(ConstantLootNumberProvider.create(6))).conditionally(BlockStatePropertyLootCondition.builder(block).properties(StatePredicate.Builder.create().exactMatch(AshLayerBlock.LAYERS, 6))),
-                        ItemEntry.builder(CinderscapesBlocks.ASH).apply(SetCountLootFunction.builder(ConstantLootNumberProvider.create(7))).conditionally(BlockStatePropertyLootCondition.builder(block).properties(StatePredicate.Builder.create().exactMatch(AshLayerBlock.LAYERS, 7))),
-                        ItemEntry.builder(CinderscapesBlocks.ASH_BLOCK)
-                	)
-        		))
-		));
+		addDrop(CinderscapesBlocks.ASH);
 	}
 }

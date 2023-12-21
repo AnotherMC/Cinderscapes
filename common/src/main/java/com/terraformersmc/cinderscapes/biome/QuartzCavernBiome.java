@@ -80,10 +80,6 @@ public class QuartzCavernBiome {
         builder.feature(GenerationStep.Feature.VEGETAL_DECORATION, entries.ref(CinderscapesPlacedFeatures.FLOOR_SHARDS));
 
         // POLYPITE QUARTZ
-        builder.feature(GenerationStep.Feature.VEGETAL_DECORATION, entries.ref(CinderscapesPlacedFeatures.POLYPITE_QUARTZ));
-        builder.feature(GenerationStep.Feature.VEGETAL_DECORATION, entries.ref(CinderscapesPlacedFeatures.POLYPITE_ROSE_QUARTZ));
-        builder.feature(GenerationStep.Feature.VEGETAL_DECORATION, entries.ref(CinderscapesPlacedFeatures.POLYPITE_SMOKY_QUARTZ));
-        builder.feature(GenerationStep.Feature.VEGETAL_DECORATION, entries.ref(CinderscapesPlacedFeatures.POLYPITE_SULFUR_QUARTZ));
 
         // VEGETATION
         builder.feature(GenerationStep.Feature.VEGETAL_DECORATION, entries.ref(CinderscapesPlacedFeatures.QUARTZ_VEGETATION));

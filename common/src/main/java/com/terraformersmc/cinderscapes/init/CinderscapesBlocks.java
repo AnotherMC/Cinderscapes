@@ -42,28 +42,11 @@ public class CinderscapesBlocks {
 
     public static Block SCORCHED_HYPHAE;
     public static Block STRIPPED_SCORCHED_HYPHAE;
-
-    public static Block SCORCHED_PLANKS;
-    public static Block SCORCHED_SLAB;
-
-    public static Block SCORCHED_PRESSURE_PLATE;
-    public static Block SCORCHED_FENCE;
-    public static Block SCORCHED_TRAPDOOR;
-    public static Block SCORCHED_FENCE_GATE;
-    public static Block SCORCHED_STAIRS;
-    public static Block SCORCHED_BUTTON;
-    public static Block SCORCHED_DOOR;
-
-    public static TerraformSignBlock SCORCHED_SIGN;
-    public static TerraformWallSignBlock SCORCHED_WALL_SIGN;
-    public static TerraformHangingSignBlock SCORCHED_HANGING_SIGN;
-    public static TerraformWallHangingSignBlock SCORCHED_WALL_HANGING_SIGN;
-
     public static Block SCORCHED_SHRUB;
     public static Block POTTED_SCORCHED_SHRUB;
 
-    public static Block SCORCHED_SPROUTS;
     public static Block SCORCHED_TENDRILS;
+    public static Block SCORCHED_SPROUTS;
     public static Block POTTED_SCORCHED_TENDRILS;
 
     public static Block ASH;
@@ -91,21 +74,6 @@ public class CinderscapesBlocks {
 
     public static Block UMBRAL_WART_BLOCK;
     public static Block UMBRAL_FLESH_BLOCK;
-
-    public static Block UMBRAL_PLANKS;
-    public static Block UMBRAL_SLAB;
-    public static Block UMBRAL_PRESSURE_PLATE;
-    public static Block UMBRAL_FENCE;
-    public static Block UMBRAL_TRAPDOOR;
-    public static Block UMBRAL_FENCE_GATE;
-    public static Block UMBRAL_STAIRS;
-    public static Block UMBRAL_BUTTON;
-    public static Block UMBRAL_DOOR;
-
-    public static TerraformSignBlock UMBRAL_SIGN;
-    public static TerraformWallSignBlock UMBRAL_WALL_SIGN;
-    public static TerraformHangingSignBlock UMBRAL_HANGING_SIGN;
-    public static TerraformWallHangingSignBlock UMBRAL_WALL_HANGING_SIGN;
 
     // Other
 
@@ -142,8 +110,6 @@ public class CinderscapesBlocks {
     public static Block POTTED_CRYSTINIUM;
 
     public static Block CRYSTALLINE_QUARTZ;
-    public static Block POLYPITE_QUARTZ;
-    public static Block POTTED_POLYPITE_QUARTZ;
 
     // Sulfur Quartz
 
@@ -151,16 +117,10 @@ public class CinderscapesBlocks {
     public static Block SULFUR_QUARTZ_BLOCK;
     public static Block CHISELED_SULFUR_QUARTZ_BLOCK;
     public static Block SULFUR_QUARTZ_PILLAR;
-    public static Block SULFUR_QUARTZ_STAIRS;
-    public static Block SULFUR_QUARTZ_SLAB;
     public static Block SMOOTH_SULFUR_QUARTZ;
-    public static Block SMOOTH_SULFUR_QUARTZ_STAIRS;
-    public static Block SMOOTH_SULFUR_QUARTZ_SLAB;
     public static Block SULFUR_QUARTZ_BRICKS;
 
     public static Block CRYSTALLINE_SULFUR_QUARTZ;
-    public static Block POLYPITE_SULFUR_QUARTZ;
-    public static Block POTTED_POLYPITE_SULFUR_QUARTZ;
 
     // Rose Quartz
 
@@ -168,16 +128,10 @@ public class CinderscapesBlocks {
     public static Block ROSE_QUARTZ_BLOCK;
     public static Block CHISELED_ROSE_QUARTZ_BLOCK;
     public static Block ROSE_QUARTZ_PILLAR;
-    public static Block ROSE_QUARTZ_STAIRS;
-    public static Block ROSE_QUARTZ_SLAB;
     public static Block SMOOTH_ROSE_QUARTZ;
-    public static Block SMOOTH_ROSE_QUARTZ_STAIRS;
-    public static Block SMOOTH_ROSE_QUARTZ_SLAB;
     public static Block ROSE_QUARTZ_BRICKS;
 
     public static Block CRYSTALLINE_ROSE_QUARTZ;
-    public static Block POLYPITE_ROSE_QUARTZ;
-    public static Block POTTED_POLYPITE_ROSE_QUARTZ;
 
     // Smoky Quartz
 
@@ -185,16 +139,10 @@ public class CinderscapesBlocks {
     public static Block SMOKY_QUARTZ_BLOCK;
     public static Block CHISELED_SMOKY_QUARTZ_BLOCK;
     public static Block SMOKY_QUARTZ_PILLAR;
-    public static Block SMOKY_QUARTZ_STAIRS;
-    public static Block SMOKY_QUARTZ_SLAB;
     public static Block SMOOTH_SMOKY_QUARTZ;
-    public static Block SMOOTH_SMOKY_QUARTZ_STAIRS;
-    public static Block SMOOTH_SMOKY_QUARTZ_SLAB;
     public static Block SMOKY_QUARTZ_BRICKS;
 
     public static Block CRYSTALLINE_SMOKY_QUARTZ;
-    public static Block POLYPITE_SMOKY_QUARTZ;
-    public static Block POTTED_POLYPITE_SMOKY_QUARTZ;
 
     public static void init() {
 
@@ -207,25 +155,6 @@ public class CinderscapesBlocks {
 
         SCORCHED_HYPHAE = CinderscapesRegistry.register("scorched_hyphae", PillarLogHelper.ofNether(MapColor.TERRACOTTA_GRAY));
         STRIPPED_SCORCHED_HYPHAE = CinderscapesRegistry.register("stripped_scorched_hyphae", PillarLogHelper.ofNether(MapColor.GRAY));
-
-        SCORCHED_PLANKS = CinderscapesRegistry.register("scorched_planks", new Block(FabricBlockSettings.copyOf(Blocks.CRIMSON_PLANKS).mapColor(MapColor.LIGHT_GRAY)));
-        SCORCHED_SLAB = CinderscapesRegistry.register("scorched_slab", new SlabBlock(FabricBlockSettings.copyOf(Blocks.CRIMSON_SLAB).mapColor(MapColor.LIGHT_GRAY)));
-
-        SCORCHED_PRESSURE_PLATE = CinderscapesRegistry.register("scorched_pressure_plate", new PressurePlateBlock(BlockSetType.CRIMSON, FabricBlockSettings.copyOf(Blocks.CRIMSON_PRESSURE_PLATE).mapColor(MapColor.LIGHT_GRAY)));
-        SCORCHED_FENCE = CinderscapesRegistry.register("scorched_fence", new FenceBlock(FabricBlockSettings.copyOf(Blocks.CRIMSON_FENCE).mapColor(MapColor.LIGHT_GRAY)));
-        SCORCHED_TRAPDOOR = CinderscapesRegistry.register("scorched_trapdoor", new TrapdoorBlock(BlockSetType.CRIMSON, FabricBlockSettings.copyOf(Blocks.CRIMSON_TRAPDOOR).mapColor(MapColor.LIGHT_GRAY)));
-        SCORCHED_FENCE_GATE = CinderscapesRegistry.register("scorched_fence_gate", new FenceGateBlock(WoodType.CRIMSON, FabricBlockSettings.copyOf(Blocks.CRIMSON_FENCE_GATE).mapColor(MapColor.LIGHT_GRAY)));
-        SCORCHED_STAIRS = CinderscapesRegistry.register("scorched_stairs", new StairsBlock(SCORCHED_PLANKS.getDefaultState(), FabricBlockSettings.copyOf(Blocks.CRIMSON_STAIRS).mapColor(MapColor.LIGHT_GRAY)));
-        SCORCHED_BUTTON = CinderscapesRegistry.register("scorched_button", new ButtonBlock(BlockSetType.CRIMSON, 30, FabricBlockSettings.copyOf(Blocks.CRIMSON_BUTTON).mapColor(MapColor.LIGHT_GRAY)));
-        SCORCHED_DOOR = CinderscapesRegistry.register("scorched_door", new DoorBlock(BlockSetType.CRIMSON, FabricBlockSettings.copyOf(Blocks.CRIMSON_DOOR).mapColor(MapColor.LIGHT_GRAY)));
-
-        final Identifier SCORCHED_SIGN_TEXTURE = Identifier.of(Cinderscapes.NAMESPACE, "entity/signs/scorched");
-        SCORCHED_SIGN = CinderscapesRegistry.register("scorched_sign", new TerraformSignBlock(SCORCHED_SIGN_TEXTURE, FabricBlockSettings.copyOf(Blocks.CRIMSON_SIGN).mapColor(MapColor.LIGHT_GRAY).sounds(BlockSoundGroup.NETHER_WOOD)));
-        SCORCHED_WALL_SIGN = CinderscapesRegistry.register("scorched_wall_sign", new TerraformWallSignBlock(SCORCHED_SIGN_TEXTURE, FabricBlockSettings.copyOf(Blocks.CRIMSON_WALL_SIGN).mapColor(MapColor.LIGHT_GRAY).sounds(BlockSoundGroup.NETHER_WOOD).dropsLike(SCORCHED_SIGN)));
-        final Identifier SCORCHED_HANGING_SIGN_TEXTURE = Identifier.of(Cinderscapes.NAMESPACE, "entity/signs/hanging/scorched");
-        final Identifier SCORCHED_HANGING_SIGN_GUI_TEXTURE = Identifier.of(Cinderscapes.NAMESPACE, "textures/gui/hanging_signs/scorched");
-        SCORCHED_HANGING_SIGN = CinderscapesRegistry.register("scorched_hanging_sign", new TerraformHangingSignBlock(SCORCHED_HANGING_SIGN_TEXTURE, SCORCHED_HANGING_SIGN_GUI_TEXTURE, FabricBlockSettings.copyOf(Blocks.CRIMSON_HANGING_SIGN).mapColor(MapColor.LIGHT_GRAY).sounds(BlockSoundGroup.NETHER_WOOD_HANGING_SIGN)));
-        SCORCHED_WALL_HANGING_SIGN = CinderscapesRegistry.register("scorched_wall_hanging_sign", new TerraformWallHangingSignBlock(SCORCHED_HANGING_SIGN_TEXTURE, SCORCHED_HANGING_SIGN_GUI_TEXTURE, FabricBlockSettings.copyOf(Blocks.CRIMSON_WALL_HANGING_SIGN).mapColor(MapColor.LIGHT_GRAY).sounds(BlockSoundGroup.NETHER_WOOD_HANGING_SIGN).dropsLike(SCORCHED_HANGING_SIGN)));
 
         SCORCHED_SHRUB = CinderscapesRegistry.register("scorched_shrub", new CinderscapesNetherPlantBlock(FabricBlockSettings.copyOf(Blocks.DEAD_BUSH).mapColor(MapColor.TERRACOTTA_GRAY), (state) -> Block.createCuboidShape(2.0, 0.0, 2.0, 14.0, 14.0, 14.0)));
         POTTED_SCORCHED_SHRUB = CinderscapesRegistry.register("potted_scorched_shrub", new FlowerPotBlock(SCORCHED_SHRUB, FabricBlockSettings.copyOf(Blocks.POTTED_DEAD_BUSH)));
@@ -259,25 +188,6 @@ public class CinderscapesBlocks {
 
         UMBRAL_WART_BLOCK = CinderscapesRegistry.register("umbral_wart_block", new CinderscapesTransparentBlock(FabricBlockSettings.copyOf(Blocks.WARPED_WART_BLOCK).mapColor(MapColor.BLUE).nonOpaque()));
         UMBRAL_FLESH_BLOCK = CinderscapesRegistry.register("umbral_flesh_block", new CinderscapesTransparentBlock(FabricBlockSettings.copyOf(UMBRAL_WART_BLOCK).luminance(15)));
-
-        UMBRAL_PLANKS = CinderscapesRegistry.register("umbral_planks", new Block(FabricBlockSettings.copyOf(Blocks.WARPED_PLANKS).mapColor(MapColor.BLUE)));
-        UMBRAL_SLAB = CinderscapesRegistry.register("umbral_slab", new SlabBlock(FabricBlockSettings.copyOf(Blocks.WARPED_SLAB).mapColor(MapColor.BLUE)));
-        UMBRAL_PRESSURE_PLATE = CinderscapesRegistry.register("umbral_pressure_plate", new PressurePlateBlock(BlockSetType.WARPED, FabricBlockSettings.copyOf(Blocks.WARPED_PRESSURE_PLATE).mapColor(MapColor.BLUE)));
-        UMBRAL_FENCE = CinderscapesRegistry.register("umbral_fence", new FenceBlock(FabricBlockSettings.copyOf(Blocks.WARPED_FENCE).mapColor(MapColor.BLUE)));
-        UMBRAL_TRAPDOOR = CinderscapesRegistry.register("umbral_trapdoor", new TrapdoorBlock(BlockSetType.WARPED, FabricBlockSettings.copyOf(Blocks.WARPED_TRAPDOOR).mapColor(MapColor.BLUE)));
-        UMBRAL_FENCE_GATE = CinderscapesRegistry.register("umbral_fence_gate", new FenceGateBlock(WoodType.WARPED, FabricBlockSettings.copyOf(Blocks.WARPED_FENCE_GATE).mapColor(MapColor.BLUE)));
-        UMBRAL_STAIRS = CinderscapesRegistry.register("umbral_stairs", new StairsBlock(UMBRAL_PLANKS.getDefaultState(), FabricBlockSettings.copyOf(Blocks.WARPED_STAIRS).mapColor(MapColor.BLUE)));
-        UMBRAL_BUTTON = CinderscapesRegistry.register("umbral_button", new ButtonBlock(BlockSetType.WARPED, 30, FabricBlockSettings.copyOf(Blocks.WARPED_BUTTON).mapColor(MapColor.BLUE)));
-        UMBRAL_DOOR = CinderscapesRegistry.register("umbral_door", new DoorBlock(BlockSetType.WARPED, FabricBlockSettings.copyOf(Blocks.WARPED_DOOR).mapColor(MapColor.BLUE)));
-
-        final Identifier UMBRAL_SIGN_TEXTURE = Identifier.of(Cinderscapes.NAMESPACE, "entity/signs/umbral");
-        UMBRAL_SIGN = CinderscapesRegistry.register("umbral_sign", new TerraformSignBlock(UMBRAL_SIGN_TEXTURE, FabricBlockSettings.copyOf(Blocks.WARPED_SIGN).mapColor(MapColor.BLUE).sounds(BlockSoundGroup.NETHER_WOOD)));
-        UMBRAL_WALL_SIGN = CinderscapesRegistry.register("umbral_wall_sign", new TerraformWallSignBlock(UMBRAL_SIGN_TEXTURE, FabricBlockSettings.copyOf(Blocks.WARPED_WALL_SIGN).mapColor(MapColor.BLUE).sounds(BlockSoundGroup.NETHER_WOOD).dropsLike(UMBRAL_SIGN)));
-        final Identifier UMBRAL_HANGING_SIGN_TEXTURE = Identifier.of(Cinderscapes.NAMESPACE, "entity/signs/hanging/umbral");
-        final Identifier UMBRAL_HANGING_SIGN_GUI_TEXTURE = Identifier.of(Cinderscapes.NAMESPACE, "textures/gui/hanging_signs/umbral");
-        UMBRAL_HANGING_SIGN = CinderscapesRegistry.register("umbral_hanging_sign", new TerraformHangingSignBlock(UMBRAL_HANGING_SIGN_TEXTURE, UMBRAL_HANGING_SIGN_GUI_TEXTURE, FabricBlockSettings.copyOf(Blocks.WARPED_HANGING_SIGN).mapColor(MapColor.BLUE).sounds(BlockSoundGroup.NETHER_WOOD_HANGING_SIGN)));
-        UMBRAL_WALL_HANGING_SIGN = CinderscapesRegistry.register("umbral_wall_hanging_sign", new TerraformWallHangingSignBlock(UMBRAL_HANGING_SIGN_TEXTURE, UMBRAL_HANGING_SIGN_GUI_TEXTURE, FabricBlockSettings.copyOf(Blocks.WARPED_WALL_HANGING_SIGN).mapColor(MapColor.BLUE).sounds(BlockSoundGroup.NETHER_WOOD_HANGING_SIGN).dropsLike(UMBRAL_HANGING_SIGN)));
-
         // Other
 
         TWILIGHT_VINE_BLOCK = CinderscapesRegistry.register("twilight_vine_block", new Block(AbstractBlock.Settings.create().mapColor(MapColor.DARK_AQUA).instrument(Instrument.BASS).strength(1.0F).sounds(BlockSoundGroup.NETHER_STEM)));
@@ -313,8 +223,6 @@ public class CinderscapesBlocks {
         POTTED_CRYSTINIUM = CinderscapesRegistry.register("potted_crystinium", new PottedCrystiniumBlock());
 
         CRYSTALLINE_QUARTZ = CinderscapesRegistry.register("crystalline_quartz", new CinderscapesTransparentBlock(FabricBlockSettings.copyOf(Blocks.QUARTZ_BLOCK).sounds(BlockSoundGroup.GLASS).nonOpaque().allowsSpawning(CinderscapesBlocks::never).solidBlock(CinderscapesBlocks::never).suffocates(CinderscapesBlocks::never).blockVision(CinderscapesBlocks::never)));
-        POLYPITE_QUARTZ = CinderscapesRegistry.register("polypite_quartz", new PolypiteQuartzBlock(FabricBlockSettings.copyOf(CRYSTALLINE_QUARTZ)));
-        POTTED_POLYPITE_QUARTZ = CinderscapesRegistry.register("potted_polypite_quartz", new FlowerPotBlock(POLYPITE_QUARTZ, FabricBlockSettings.copyOf(Blocks.FLOWER_POT)));
 
         // Sulfur Quartz
 
@@ -322,16 +230,10 @@ public class CinderscapesBlocks {
         SULFUR_QUARTZ_BLOCK = CinderscapesRegistry.register("sulfur_quartz_block", new Block(FabricBlockSettings.copyOf(Blocks.QUARTZ_BLOCK).mapColor(MapColor.YELLOW)));
         CHISELED_SULFUR_QUARTZ_BLOCK = CinderscapesRegistry.register("chiseled_sulfur_quartz_block", new Block(FabricBlockSettings.copyOf(Blocks.QUARTZ_BLOCK).mapColor(MapColor.YELLOW)));
         SULFUR_QUARTZ_PILLAR = CinderscapesRegistry.register("sulfur_quartz_pillar", new PillarBlock(FabricBlockSettings.copyOf(Blocks.QUARTZ_PILLAR).mapColor(MapColor.YELLOW)));
-        SULFUR_QUARTZ_STAIRS = CinderscapesRegistry.register("sulfur_quartz_stairs", new StairsBlock(SULFUR_QUARTZ_BLOCK.getDefaultState(), FabricBlockSettings.copyOf(Blocks.QUARTZ_STAIRS).mapColor(MapColor.YELLOW)));
-        SULFUR_QUARTZ_SLAB = CinderscapesRegistry.register("sulfur_quartz_slab", new SlabBlock(FabricBlockSettings.copyOf(Blocks.QUARTZ_SLAB).mapColor(MapColor.YELLOW)));
         SMOOTH_SULFUR_QUARTZ = CinderscapesRegistry.register("smooth_sulfur_quartz", new Block(FabricBlockSettings.copyOf(Blocks.SMOOTH_QUARTZ).mapColor(MapColor.YELLOW)));
-        SMOOTH_SULFUR_QUARTZ_STAIRS = CinderscapesRegistry.register("smooth_sulfur_quartz_stairs", new StairsBlock(SMOOTH_SULFUR_QUARTZ.getDefaultState(), FabricBlockSettings.copyOf(Blocks.SMOOTH_QUARTZ_STAIRS).mapColor(MapColor.YELLOW)));
-        SMOOTH_SULFUR_QUARTZ_SLAB = CinderscapesRegistry.register("smooth_sulfur_quartz_slab", new SlabBlock(FabricBlockSettings.copyOf(Blocks.SMOOTH_QUARTZ_SLAB).mapColor(MapColor.YELLOW)));
         SULFUR_QUARTZ_BRICKS = CinderscapesRegistry.register("sulfur_quartz_bricks", new Block(FabricBlockSettings.copyOf(Blocks.QUARTZ_BRICKS).mapColor(MapColor.YELLOW)));
 
         CRYSTALLINE_SULFUR_QUARTZ = CinderscapesRegistry.register("crystalline_sulfur_quartz", new CinderscapesTransparentBlock(FabricBlockSettings.copyOf(CRYSTALLINE_QUARTZ).mapColor(MapColor.YELLOW)));
-        POLYPITE_SULFUR_QUARTZ = CinderscapesRegistry.register("polypite_sulfur_quartz", new PolypiteQuartzBlock(FabricBlockSettings.copyOf(CRYSTALLINE_SULFUR_QUARTZ)));
-        POTTED_POLYPITE_SULFUR_QUARTZ = CinderscapesRegistry.register("potted_polypite_sulfur_quartz", new FlowerPotBlock(POLYPITE_SULFUR_QUARTZ, FabricBlockSettings.copyOf(Blocks.FLOWER_POT)));
 
         // Rose Quartz
 
@@ -339,16 +241,10 @@ public class CinderscapesBlocks {
         ROSE_QUARTZ_BLOCK = CinderscapesRegistry.register("rose_quartz_block", new Block(FabricBlockSettings.copyOf(Blocks.QUARTZ_BLOCK).mapColor(MapColor.PINK)));
         CHISELED_ROSE_QUARTZ_BLOCK = CinderscapesRegistry.register("chiseled_rose_quartz_block", new Block(FabricBlockSettings.copyOf(Blocks.QUARTZ_BLOCK).mapColor(MapColor.PINK)));
         ROSE_QUARTZ_PILLAR = CinderscapesRegistry.register("rose_quartz_pillar", new PillarBlock(FabricBlockSettings.copyOf(Blocks.QUARTZ_PILLAR).mapColor(MapColor.PINK)));
-        ROSE_QUARTZ_STAIRS = CinderscapesRegistry.register("rose_quartz_stairs", new StairsBlock(ROSE_QUARTZ_BLOCK.getDefaultState(), FabricBlockSettings.copyOf(Blocks.QUARTZ_STAIRS).mapColor(MapColor.PINK)));
-        ROSE_QUARTZ_SLAB = CinderscapesRegistry.register("rose_quartz_slab", new SlabBlock(FabricBlockSettings.copyOf(Blocks.QUARTZ_SLAB).mapColor(MapColor.PINK)));
         SMOOTH_ROSE_QUARTZ = CinderscapesRegistry.register("smooth_rose_quartz", new Block(FabricBlockSettings.copyOf(Blocks.SMOOTH_QUARTZ).mapColor(MapColor.PINK)));
-        SMOOTH_ROSE_QUARTZ_STAIRS = CinderscapesRegistry.register("smooth_rose_quartz_stairs", new StairsBlock(SMOOTH_ROSE_QUARTZ.getDefaultState(), FabricBlockSettings.copyOf(Blocks.SMOOTH_QUARTZ_STAIRS).mapColor(MapColor.PINK)));
-        SMOOTH_ROSE_QUARTZ_SLAB = CinderscapesRegistry.register("smooth_rose_quartz_slab", new SlabBlock(FabricBlockSettings.copyOf(Blocks.SMOOTH_QUARTZ_SLAB).mapColor(MapColor.PINK)));
         ROSE_QUARTZ_BRICKS = CinderscapesRegistry.register("rose_quartz_bricks", new Block(FabricBlockSettings.copyOf(Blocks.QUARTZ_BRICKS).mapColor(MapColor.PINK)));
 
         CRYSTALLINE_ROSE_QUARTZ = CinderscapesRegistry.register("crystalline_rose_quartz", new CinderscapesTransparentBlock(FabricBlockSettings.copyOf(CRYSTALLINE_QUARTZ).mapColor(MapColor.PINK)));
-        POLYPITE_ROSE_QUARTZ = CinderscapesRegistry.register("polypite_rose_quartz", new PolypiteQuartzBlock(FabricBlockSettings.copyOf(CRYSTALLINE_ROSE_QUARTZ)));
-        POTTED_POLYPITE_ROSE_QUARTZ = CinderscapesRegistry.register("potted_polypite_rose_quartz", new FlowerPotBlock(POLYPITE_ROSE_QUARTZ, FabricBlockSettings.copyOf(Blocks.FLOWER_POT)));
 
         // Smoky Quartz
 
@@ -356,16 +252,10 @@ public class CinderscapesBlocks {
         SMOKY_QUARTZ_BLOCK = CinderscapesRegistry.register("smoky_quartz_block", new Block(FabricBlockSettings.copyOf(Blocks.QUARTZ_BLOCK).mapColor(MapColor.GRAY)));
         CHISELED_SMOKY_QUARTZ_BLOCK = CinderscapesRegistry.register("chiseled_smoky_quartz_block", new Block(FabricBlockSettings.copyOf(Blocks.QUARTZ_BLOCK).mapColor(MapColor.GRAY)));
         SMOKY_QUARTZ_PILLAR = CinderscapesRegistry.register("smoky_quartz_pillar", new PillarBlock(FabricBlockSettings.copyOf(Blocks.QUARTZ_PILLAR).mapColor(MapColor.GRAY)));
-        SMOKY_QUARTZ_STAIRS = CinderscapesRegistry.register("smoky_quartz_stairs", new StairsBlock(SMOKY_QUARTZ_BLOCK.getDefaultState(), FabricBlockSettings.copyOf(Blocks.QUARTZ_STAIRS).mapColor(MapColor.GRAY)));
-        SMOKY_QUARTZ_SLAB = CinderscapesRegistry.register("smoky_quartz_slab", new SlabBlock(FabricBlockSettings.copyOf(Blocks.QUARTZ_SLAB).mapColor(MapColor.GRAY)));
         SMOOTH_SMOKY_QUARTZ = CinderscapesRegistry.register("smooth_smoky_quartz", new Block(FabricBlockSettings.copyOf(Blocks.SMOOTH_QUARTZ).mapColor(MapColor.GRAY)));
-        SMOOTH_SMOKY_QUARTZ_STAIRS = CinderscapesRegistry.register("smooth_smoky_quartz_stairs", new StairsBlock(SMOOTH_SMOKY_QUARTZ.getDefaultState(), FabricBlockSettings.copyOf(Blocks.SMOOTH_QUARTZ_STAIRS).mapColor(MapColor.GRAY)));
-        SMOOTH_SMOKY_QUARTZ_SLAB = CinderscapesRegistry.register("smooth_smoky_quartz_slab", new SlabBlock(FabricBlockSettings.copyOf(Blocks.SMOOTH_QUARTZ_SLAB).mapColor(MapColor.GRAY)));
         SMOKY_QUARTZ_BRICKS = CinderscapesRegistry.register("smoky_quartz_bricks", new Block(FabricBlockSettings.copyOf(Blocks.QUARTZ_BRICKS).mapColor(MapColor.GRAY)));
 
         CRYSTALLINE_SMOKY_QUARTZ = CinderscapesRegistry.register("crystalline_smoky_quartz", new CinderscapesTransparentBlock(FabricBlockSettings.copyOf(CRYSTALLINE_QUARTZ).mapColor(MapColor.GRAY)));
-        POLYPITE_SMOKY_QUARTZ = CinderscapesRegistry.register("polypite_smoky_quartz", new PolypiteQuartzBlock(FabricBlockSettings.copyOf(CRYSTALLINE_SMOKY_QUARTZ)));
-        POTTED_POLYPITE_SMOKY_QUARTZ = CinderscapesRegistry.register("potted_polypite_smoky_quartz", new FlowerPotBlock(POLYPITE_SMOKY_QUARTZ, FabricBlockSettings.copyOf(Blocks.FLOWER_POT)));
 
         addStrippables();
     }

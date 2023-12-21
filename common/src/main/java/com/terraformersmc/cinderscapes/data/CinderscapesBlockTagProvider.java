@@ -28,10 +28,6 @@ public class CinderscapesBlockTagProvider extends FabricTagProvider.BlockTagProv
 			.add(CinderscapesBlocks.POTTED_CRYSTINIUM)
 			.add(CinderscapesBlocks.POTTED_LUMINOUS_POD)
 			.add(CinderscapesBlocks.POTTED_PHOTOFERN)
-			.add(CinderscapesBlocks.POTTED_POLYPITE_QUARTZ)
-			.add(CinderscapesBlocks.POTTED_POLYPITE_ROSE_QUARTZ)
-			.add(CinderscapesBlocks.POTTED_POLYPITE_SMOKY_QUARTZ)
-			.add(CinderscapesBlocks.POTTED_POLYPITE_SULFUR_QUARTZ)
 			.add(CinderscapesBlocks.POTTED_PYRACINTH)
 			.add(CinderscapesBlocks.POTTED_SCORCHED_SHRUB)
 			.add(CinderscapesBlocks.POTTED_SCORCHED_TENDRILS)
@@ -65,79 +61,14 @@ public class CinderscapesBlockTagProvider extends FabricTagProvider.BlockTagProv
 		getOrCreateTagBuilder(BlockTags.NYLIUM)
 			.add(CinderscapesBlocks.UMBRAL_NYLIUM);
 
-		getOrCreateTagBuilder(BlockTags.PLANKS)
-			.add(CinderscapesBlocks.UMBRAL_PLANKS)
-			.add(CinderscapesBlocks.SCORCHED_PLANKS);
-
-		getOrCreateTagBuilder(BlockTags.CEILING_HANGING_SIGNS)
-			.add(CinderscapesBlocks.SCORCHED_HANGING_SIGN)
-			.add(CinderscapesBlocks.UMBRAL_HANGING_SIGN);
-
-		getOrCreateTagBuilder(BlockTags.WALL_HANGING_SIGNS)
-			.add(CinderscapesBlocks.SCORCHED_WALL_HANGING_SIGN)
-			.add(CinderscapesBlocks.UMBRAL_WALL_HANGING_SIGN);
-
-		getOrCreateTagBuilder(BlockTags.STANDING_SIGNS)
-			.add(CinderscapesBlocks.SCORCHED_SIGN)
-			.add(CinderscapesBlocks.UMBRAL_SIGN);
-
-		getOrCreateTagBuilder(BlockTags.WALL_SIGNS)
-			.add(CinderscapesBlocks.SCORCHED_WALL_SIGN)
-			.add(CinderscapesBlocks.UMBRAL_WALL_SIGN);
-
-		getOrCreateTagBuilder(BlockTags.SLABS)
-			.add(CinderscapesBlocks.ROSE_QUARTZ_SLAB)
-			.add(CinderscapesBlocks.SMOKY_QUARTZ_SLAB)
-			.add(CinderscapesBlocks.SMOOTH_ROSE_QUARTZ_SLAB)
-			.add(CinderscapesBlocks.SMOOTH_SMOKY_QUARTZ_SLAB)
-			.add(CinderscapesBlocks.SMOOTH_SULFUR_QUARTZ_SLAB)
-			.add(CinderscapesBlocks.SULFUR_QUARTZ_SLAB);
-
 		getOrCreateTagBuilder(BlockTags.SMALL_FLOWERS)
 			.add(CinderscapesBlocks.CRYSTINIUM)
 			.add(CinderscapesBlocks.PYRACINTH)
 			.add(CinderscapesBlocks.SCORCHED_TENDRILS)
 			.add(CinderscapesBlocks.TWILIGHT_TENDRILS);
 
-		getOrCreateTagBuilder(BlockTags.STAIRS)
-			.add(CinderscapesBlocks.ROSE_QUARTZ_STAIRS)
-			.add(CinderscapesBlocks.SMOKY_QUARTZ_STAIRS)
-			.add(CinderscapesBlocks.SMOOTH_ROSE_QUARTZ_STAIRS)
-			.add(CinderscapesBlocks.SMOOTH_SMOKY_QUARTZ_STAIRS)
-			.add(CinderscapesBlocks.SMOOTH_SULFUR_QUARTZ_STAIRS)
-			.add(CinderscapesBlocks.SULFUR_QUARTZ_STAIRS);
-
 		getOrCreateTagBuilder(BlockTags.WART_BLOCKS)
 			.add(CinderscapesBlocks.UMBRAL_WART_BLOCK);
-
-		getOrCreateTagBuilder(BlockTags.WOODEN_BUTTONS)
-			.add(CinderscapesBlocks.SCORCHED_BUTTON)
-			.add(CinderscapesBlocks.UMBRAL_BUTTON);
-
-		getOrCreateTagBuilder(BlockTags.WOODEN_DOORS)
-			.add(CinderscapesBlocks.SCORCHED_DOOR)
-			.add(CinderscapesBlocks.UMBRAL_DOOR);
-
-		getOrCreateTagBuilder(BlockTags.WOODEN_FENCES)
-			.add(CinderscapesBlocks.SCORCHED_FENCE)
-			.add(CinderscapesBlocks.UMBRAL_FENCE);
-
-		getOrCreateTagBuilder(BlockTags.WOODEN_PRESSURE_PLATES)
-			.add(CinderscapesBlocks.SCORCHED_PRESSURE_PLATE)
-			.add(CinderscapesBlocks.UMBRAL_PRESSURE_PLATE);
-
-		getOrCreateTagBuilder(BlockTags.WOODEN_SLABS)
-			.add(CinderscapesBlocks.SCORCHED_SLAB)
-			.add(CinderscapesBlocks.UMBRAL_SLAB);
-
-		getOrCreateTagBuilder(BlockTags.WOODEN_STAIRS)
-			.add(CinderscapesBlocks.SCORCHED_STAIRS)
-			.add(CinderscapesBlocks.UMBRAL_STAIRS);
-
-		getOrCreateTagBuilder(BlockTags.WOODEN_TRAPDOORS)
-			.add(CinderscapesBlocks.SCORCHED_TRAPDOOR)
-			.add(CinderscapesBlocks.UMBRAL_TRAPDOOR);
-
 
 		// tool block tags
 		getOrCreateTagBuilder(BlockTags.AXE_MINEABLE)
@@ -165,38 +96,22 @@ public class CinderscapesBlockTagProvider extends FabricTagProvider.BlockTagProv
 			.add(CinderscapesBlocks.CRYSTALLINE_SMOKY_QUARTZ)
 			.add(CinderscapesBlocks.CRYSTALLINE_SULFUR_QUARTZ)
 			.add(CinderscapesBlocks.NODZOL)
-			.add(CinderscapesBlocks.POLYPITE_QUARTZ)
-			.add(CinderscapesBlocks.POLYPITE_ROSE_QUARTZ)
-			.add(CinderscapesBlocks.POLYPITE_SMOKY_QUARTZ)
-			.add(CinderscapesBlocks.POLYPITE_SULFUR_QUARTZ)
 			.add(CinderscapesBlocks.ROSE_QUARTZ_BLOCK)
 			.add(CinderscapesBlocks.ROSE_QUARTZ_BRICKS)
 			.add(CinderscapesBlocks.ROSE_QUARTZ_ORE)
 			.add(CinderscapesBlocks.ROSE_QUARTZ_PILLAR)
-			.add(CinderscapesBlocks.ROSE_QUARTZ_SLAB)
-			.add(CinderscapesBlocks.ROSE_QUARTZ_STAIRS)
 			.add(CinderscapesBlocks.SMOKY_QUARTZ_BLOCK)
 			.add(CinderscapesBlocks.SMOKY_QUARTZ_BRICKS)
 			.add(CinderscapesBlocks.SMOKY_QUARTZ_ORE)
 			.add(CinderscapesBlocks.SMOKY_QUARTZ_PILLAR)
-			.add(CinderscapesBlocks.SMOKY_QUARTZ_SLAB)
-			.add(CinderscapesBlocks.SMOKY_QUARTZ_STAIRS)
 			.add(CinderscapesBlocks.SMOOTH_ROSE_QUARTZ)
-			.add(CinderscapesBlocks.SMOOTH_ROSE_QUARTZ_SLAB)
-			.add(CinderscapesBlocks.SMOOTH_ROSE_QUARTZ_STAIRS)
 			.add(CinderscapesBlocks.SMOOTH_SMOKY_QUARTZ)
-			.add(CinderscapesBlocks.SMOOTH_SMOKY_QUARTZ_SLAB)
-			.add(CinderscapesBlocks.SMOOTH_SMOKY_QUARTZ_STAIRS)
 			.add(CinderscapesBlocks.SMOOTH_SULFUR_QUARTZ)
-			.add(CinderscapesBlocks.SMOOTH_SULFUR_QUARTZ_SLAB)
-			.add(CinderscapesBlocks.SMOOTH_SULFUR_QUARTZ_STAIRS)
 			.add(CinderscapesBlocks.SULFUR_ORE)
 			.add(CinderscapesBlocks.SULFUR_QUARTZ_BLOCK)
 			.add(CinderscapesBlocks.SULFUR_QUARTZ_BRICKS)
 			.add(CinderscapesBlocks.SULFUR_QUARTZ_ORE)
 			.add(CinderscapesBlocks.SULFUR_QUARTZ_PILLAR)
-			.add(CinderscapesBlocks.SULFUR_QUARTZ_SLAB)
-			.add(CinderscapesBlocks.SULFUR_QUARTZ_STAIRS)
 			.add(CinderscapesBlocks.UMBRAL_NYLIUM);
 
 		getOrCreateTagBuilder(BlockTags.SHOVEL_MINEABLE)

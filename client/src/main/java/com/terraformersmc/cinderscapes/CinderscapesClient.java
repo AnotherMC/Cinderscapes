@@ -61,19 +61,10 @@ public class CinderscapesClient implements ClientModInitializer {
                 CinderscapesBlocks.TWILIGHT_FESCUES,
                 CinderscapesBlocks.TWILIGHT_TENDRILS,
                 CinderscapesBlocks.UMBRAL_FUNGUS,
-                CinderscapesBlocks.UMBRAL_DOOR,
 
                 // Quartz Cavern
                 CinderscapesBlocks.CRYSTINIUM,
-                CinderscapesBlocks.POTTED_CRYSTINIUM,
-                CinderscapesBlocks.POLYPITE_QUARTZ,
-                CinderscapesBlocks.POLYPITE_ROSE_QUARTZ,
-                CinderscapesBlocks.POLYPITE_SMOKY_QUARTZ,
-                CinderscapesBlocks.POLYPITE_SULFUR_QUARTZ,
-                CinderscapesBlocks.POTTED_POLYPITE_QUARTZ,
-                CinderscapesBlocks.POTTED_POLYPITE_ROSE_QUARTZ,
-                CinderscapesBlocks.POTTED_POLYPITE_SMOKY_QUARTZ,
-                CinderscapesBlocks.POTTED_POLYPITE_SULFUR_QUARTZ
+                CinderscapesBlocks.POTTED_CRYSTINIUM
         );
 
         ItemTooltipCallback.EVENT.register((stack, context, lines) -> {
@@ -82,9 +73,5 @@ public class CinderscapesClient implements ClientModInitializer {
             }
         });
 
-        SpriteIdentifierRegistry.INSTANCE.addIdentifier(new SpriteIdentifier(TexturedRenderLayers.SIGNS_ATLAS_TEXTURE, CinderscapesBlocks.SCORCHED_SIGN.getTexture()));
-        SpriteIdentifierRegistry.INSTANCE.addIdentifier(new SpriteIdentifier(TexturedRenderLayers.SIGNS_ATLAS_TEXTURE, CinderscapesBlocks.SCORCHED_HANGING_SIGN.getTexture()));
-        SpriteIdentifierRegistry.INSTANCE.addIdentifier(new SpriteIdentifier(TexturedRenderLayers.SIGNS_ATLAS_TEXTURE, CinderscapesBlocks.UMBRAL_SIGN.getTexture()));
-        SpriteIdentifierRegistry.INSTANCE.addIdentifier(new SpriteIdentifier(TexturedRenderLayers.SIGNS_ATLAS_TEXTURE, CinderscapesBlocks.UMBRAL_HANGING_SIGN.getTexture()));
     }
 }

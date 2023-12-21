@@ -80,11 +80,6 @@ public class CinderscapesPlacedFeatures {
     private static final RegistryKey<ConfiguredFeature<?, ?>> FLOOR_SHARDS_CONFIGURED = CinderscapesConfiguredFeatures.createRegistryKey("quartz_cavern/floor_shards");
     public static final RegistryKey<PlacedFeature> FLOOR_SHARDS = createRegistryKey("quartz_cavern/floor_shards");
 
-    public static final RegistryKey<PlacedFeature> POLYPITE_QUARTZ = createRegistryKey("quartz_cavern/polypite_quartz");
-    public static final RegistryKey<PlacedFeature> POLYPITE_SULFUR_QUARTZ = createRegistryKey("quartz_cavern/polypite_sulfur_quartz");
-    public static final RegistryKey<PlacedFeature> POLYPITE_ROSE_QUARTZ = createRegistryKey("quartz_cavern/polypite_rose_quartz");
-    public static final RegistryKey<PlacedFeature> POLYPITE_SMOKY_QUARTZ = createRegistryKey("quartz_cavern/polypite_smoky_quartz");
-
     public static void populate(FabricDynamicRegistryProvider.Entries entries) {
         /* ASHY SHOALS */
         entries.add(DEBRIS_ORE_LARGE, placeFeature(entries, CinderscapesConfiguredFeatures.DEBRIS_ORE_LARGE, HeightRangePlacementModifier.trapezoid(YOffset.fixed(8), YOffset.fixed(24)), CountPlacementModifier.of(4), SquarePlacementModifier.of()));
@@ -201,11 +196,6 @@ public class CinderscapesPlacedFeatures {
                 )
         ));
         entries.add(FLOOR_SHARDS, placeFeature(entries, FLOOR_SHARDS_CONFIGURED, PlacedFeatures.createCountExtraModifier(1, 0.5f, 1), new SafelistRangeFloorPlacementModifier(YOffset.aboveBottom(20), YOffset.belowTop(20), SHARD_SAFELIST)));
-
-        entries.add(POLYPITE_QUARTZ, placeFeature(entries, CinderscapesConfiguredFeatures.POLYPITE_QUARTZ, CountPlacementModifier.of(128), PlacedFeatures.TEN_ABOVE_AND_BELOW_RANGE, RandomOffsetPlacementModifier.of(UniformIntProvider.create(9, 15), UniformIntProvider.create(4, 7))));
-        entries.add(POLYPITE_SULFUR_QUARTZ, placeFeature(entries, CinderscapesConfiguredFeatures.POLYPITE_SULFUR_QUARTZ, CountPlacementModifier.of(128), PlacedFeatures.TEN_ABOVE_AND_BELOW_RANGE, RandomOffsetPlacementModifier.of(UniformIntProvider.create(9, 15), UniformIntProvider.create(4, 7))));
-        entries.add(POLYPITE_ROSE_QUARTZ, placeFeature(entries, CinderscapesConfiguredFeatures.POLYPITE_ROSE_QUARTZ, CountPlacementModifier.of(128), PlacedFeatures.TEN_ABOVE_AND_BELOW_RANGE, RandomOffsetPlacementModifier.of(UniformIntProvider.create(9, 15), UniformIntProvider.create(4, 7))));
-        entries.add(POLYPITE_SMOKY_QUARTZ, placeFeature(entries, CinderscapesConfiguredFeatures.POLYPITE_SMOKY_QUARTZ, CountPlacementModifier.of(128), PlacedFeatures.TEN_ABOVE_AND_BELOW_RANGE, RandomOffsetPlacementModifier.of(UniformIntProvider.create(9, 15), UniformIntProvider.create(4, 7))));
     }
 
     public static RegistryKey<PlacedFeature> createRegistryKey(String name) {

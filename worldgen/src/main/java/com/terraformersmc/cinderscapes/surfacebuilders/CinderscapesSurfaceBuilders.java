@@ -16,7 +16,7 @@ public class CinderscapesSurfaceBuilders {
 	public static void init() {
 		builders.put(Identifier.of(Cinderscapes.NAMESPACE, "surface/ashy_shoals"),
 				new AshyShoalsSurfaceBuilder(
-						CinderscapesBlocks.ASH.getDefaultState().with(AshLayerBlock.LAYERS, 1),
+						CinderscapesBlocks.ASH.getDefaultState(),
 						Blocks.MAGMA_BLOCK.getDefaultState(),
 						Blocks.LAVA.getDefaultState()
 				).setBiomeKey(CinderscapesBiomes.ASHY_SHOALS));

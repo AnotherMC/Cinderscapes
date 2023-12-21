@@ -88,7 +88,6 @@ public class CinderscapesRecipeProvider extends FabricRecipeProvider {
 
 
 		// quartz recipes
-		offerChiseledBlockRecipe(exporter, RecipeCategory.BUILDING_BLOCKS, CinderscapesBlocks.CHISELED_ROSE_QUARTZ_BLOCK, CinderscapesBlocks.ROSE_QUARTZ_SLAB);
 		offerStonecuttingRecipe(exporter, RecipeCategory.BUILDING_BLOCKS, CinderscapesBlocks.CHISELED_ROSE_QUARTZ_BLOCK, CinderscapesBlocks.ROSE_QUARTZ_BLOCK);
 		offerSmelting(exporter, List.of(CinderscapesBlocks.ROSE_QUARTZ_ORE), RecipeCategory.MISC, CinderscapesItems.ROSE_QUARTZ, 0.2f, 200, "misc");
 		ShapedRecipeJsonBuilder.create(RecipeCategory.BUILDING_BLOCKS, CinderscapesBlocks.ROSE_QUARTZ_BLOCK, 1)
@@ -107,23 +106,9 @@ public class CinderscapesRecipeProvider extends FabricRecipeProvider {
 				.criterion("has_quartz_blocks", InventoryChangedCriterion.Conditions.items(CinderscapesBlocks.ROSE_QUARTZ_BLOCK))
 				.offerTo(exporter);
 		offerStonecuttingRecipe(exporter, RecipeCategory.BUILDING_BLOCKS, CinderscapesBlocks.ROSE_QUARTZ_PILLAR, CinderscapesBlocks.ROSE_QUARTZ_BLOCK);
-		createSlabRecipe(RecipeCategory.BUILDING_BLOCKS, CinderscapesBlocks.ROSE_QUARTZ_SLAB, Ingredient.ofItems(CinderscapesBlocks.CHISELED_ROSE_QUARTZ_BLOCK, CinderscapesBlocks.ROSE_QUARTZ_BLOCK, CinderscapesBlocks.ROSE_QUARTZ_PILLAR))
-				.criterion("has_quartz_blocks", InventoryChangedCriterion.Conditions.items(getItemTagPredicate(CinderscapesItemTags.ROSE_QUARTZ_CONVERTIBLES)))
-				.offerTo(exporter);
-		offerStonecuttingRecipe(exporter, RecipeCategory.BUILDING_BLOCKS, CinderscapesBlocks.ROSE_QUARTZ_SLAB, CinderscapesBlocks.ROSE_QUARTZ_BLOCK, 2);
-		createStairsRecipe(CinderscapesBlocks.ROSE_QUARTZ_STAIRS, Ingredient.ofItems(CinderscapesBlocks.CHISELED_ROSE_QUARTZ_BLOCK, CinderscapesBlocks.ROSE_QUARTZ_BLOCK, CinderscapesBlocks.ROSE_QUARTZ_PILLAR))
-				.criterion("has_quartz_blocks", InventoryChangedCriterion.Conditions.items(getItemTagPredicate(CinderscapesItemTags.ROSE_QUARTZ_CONVERTIBLES)))
-				.offerTo(exporter);
-		offerStonecuttingRecipe(exporter, RecipeCategory.BUILDING_BLOCKS, CinderscapesBlocks.ROSE_QUARTZ_STAIRS, CinderscapesBlocks.ROSE_QUARTZ_BLOCK);
-		offerSmelting(exporter, List.of(CinderscapesBlocks.ROSE_QUARTZ_BLOCK), RecipeCategory.BUILDING_BLOCKS, CinderscapesBlocks.SMOOTH_ROSE_QUARTZ, 0.1f, 200, "building_blocks");
-		offerSlabRecipe(exporter, RecipeCategory.BUILDING_BLOCKS, CinderscapesBlocks.SMOOTH_ROSE_QUARTZ_SLAB, CinderscapesBlocks.SMOOTH_ROSE_QUARTZ);
-		offerStonecuttingRecipe(exporter, RecipeCategory.BUILDING_BLOCKS, CinderscapesBlocks.SMOOTH_ROSE_QUARTZ_SLAB, CinderscapesBlocks.SMOOTH_ROSE_QUARTZ, 2);
-		createStairsRecipe(CinderscapesBlocks.SMOOTH_ROSE_QUARTZ_STAIRS, Ingredient.ofItems(CinderscapesBlocks.SMOOTH_ROSE_QUARTZ))
-				.criterion("has_smooth_quartz", InventoryChangedCriterion.Conditions.items(CinderscapesBlocks.SMOOTH_ROSE_QUARTZ))
-				.offerTo(exporter);
-		offerStonecuttingRecipe(exporter, RecipeCategory.BUILDING_BLOCKS, CinderscapesBlocks.SMOOTH_ROSE_QUARTZ_STAIRS, CinderscapesBlocks.SMOOTH_ROSE_QUARTZ);
 
-		offerChiseledBlockRecipe(exporter, RecipeCategory.BUILDING_BLOCKS, CinderscapesBlocks.CHISELED_SMOKY_QUARTZ_BLOCK, CinderscapesBlocks.SMOKY_QUARTZ_SLAB);
+		offerSmelting(exporter, List.of(CinderscapesBlocks.ROSE_QUARTZ_BLOCK), RecipeCategory.BUILDING_BLOCKS, CinderscapesBlocks.SMOOTH_ROSE_QUARTZ, 0.1f, 200, "building_blocks");
+
 		offerStonecuttingRecipe(exporter, RecipeCategory.BUILDING_BLOCKS, CinderscapesBlocks.CHISELED_SMOKY_QUARTZ_BLOCK, CinderscapesBlocks.SMOKY_QUARTZ_BLOCK);
 		offerSmelting(exporter, List.of(CinderscapesBlocks.SMOKY_QUARTZ_ORE), RecipeCategory.MISC, CinderscapesItems.SMOKY_QUARTZ, 0.2f, 200, "misc");
 		ShapedRecipeJsonBuilder.create(RecipeCategory.BUILDING_BLOCKS, CinderscapesBlocks.SMOKY_QUARTZ_BLOCK, 1)
@@ -142,23 +127,9 @@ public class CinderscapesRecipeProvider extends FabricRecipeProvider {
 				.criterion("has_quartz_blocks", InventoryChangedCriterion.Conditions.items(CinderscapesBlocks.SMOKY_QUARTZ_BLOCK))
 				.offerTo(exporter);
 		offerStonecuttingRecipe(exporter, RecipeCategory.BUILDING_BLOCKS, CinderscapesBlocks.SMOKY_QUARTZ_PILLAR, CinderscapesBlocks.SMOKY_QUARTZ_BLOCK);
-		createSlabRecipe(RecipeCategory.BUILDING_BLOCKS, CinderscapesBlocks.SMOKY_QUARTZ_SLAB, Ingredient.ofItems(CinderscapesBlocks.CHISELED_SMOKY_QUARTZ_BLOCK, CinderscapesBlocks.SMOKY_QUARTZ_BLOCK, CinderscapesBlocks.SMOKY_QUARTZ_PILLAR))
-				.criterion("has_quartz_blocks", InventoryChangedCriterion.Conditions.items(getItemTagPredicate(CinderscapesItemTags.SMOKY_QUARTZ_CONVERTIBLES)))
-				.offerTo(exporter);
-		offerStonecuttingRecipe(exporter, RecipeCategory.BUILDING_BLOCKS, CinderscapesBlocks.SMOKY_QUARTZ_SLAB, CinderscapesBlocks.SMOKY_QUARTZ_BLOCK, 2);
-		createStairsRecipe(CinderscapesBlocks.SMOKY_QUARTZ_STAIRS, Ingredient.ofItems(CinderscapesBlocks.CHISELED_SMOKY_QUARTZ_BLOCK, CinderscapesBlocks.SMOKY_QUARTZ_BLOCK, CinderscapesBlocks.SMOKY_QUARTZ_PILLAR))
-				.criterion("has_quartz_blocks", InventoryChangedCriterion.Conditions.items(getItemTagPredicate(CinderscapesItemTags.SMOKY_QUARTZ_CONVERTIBLES)))
-				.offerTo(exporter);
-		offerStonecuttingRecipe(exporter, RecipeCategory.BUILDING_BLOCKS, CinderscapesBlocks.SMOKY_QUARTZ_STAIRS, CinderscapesBlocks.SMOKY_QUARTZ_BLOCK);
 		offerSmelting(exporter, List.of(CinderscapesBlocks.SMOKY_QUARTZ_BLOCK), RecipeCategory.BUILDING_BLOCKS, CinderscapesBlocks.SMOOTH_SMOKY_QUARTZ, 0.1f, 200, "building_blocks");
-		offerSlabRecipe(exporter, RecipeCategory.BUILDING_BLOCKS, CinderscapesBlocks.SMOOTH_SMOKY_QUARTZ_SLAB, CinderscapesBlocks.SMOOTH_SMOKY_QUARTZ);
-		offerStonecuttingRecipe(exporter, RecipeCategory.BUILDING_BLOCKS, CinderscapesBlocks.SMOOTH_SMOKY_QUARTZ_SLAB, CinderscapesBlocks.SMOOTH_SMOKY_QUARTZ, 2);
-		createStairsRecipe(CinderscapesBlocks.SMOOTH_SMOKY_QUARTZ_STAIRS, Ingredient.ofItems(CinderscapesBlocks.SMOOTH_SMOKY_QUARTZ))
-				.criterion("has_smooth_quartz", InventoryChangedCriterion.Conditions.items(CinderscapesBlocks.SMOOTH_SMOKY_QUARTZ))
-				.offerTo(exporter);
-		offerStonecuttingRecipe(exporter, RecipeCategory.BUILDING_BLOCKS, CinderscapesBlocks.SMOOTH_SMOKY_QUARTZ_STAIRS, CinderscapesBlocks.SMOOTH_SMOKY_QUARTZ);
 
-		offerChiseledBlockRecipe(exporter, RecipeCategory.BUILDING_BLOCKS, CinderscapesBlocks.CHISELED_SULFUR_QUARTZ_BLOCK, CinderscapesBlocks.SULFUR_QUARTZ_SLAB);
+
 		offerStonecuttingRecipe(exporter, RecipeCategory.BUILDING_BLOCKS, CinderscapesBlocks.CHISELED_SULFUR_QUARTZ_BLOCK, CinderscapesBlocks.SULFUR_QUARTZ_BLOCK);
 		offerSmelting(exporter, List.of(CinderscapesBlocks.SULFUR_QUARTZ_ORE), RecipeCategory.MISC, CinderscapesItems.SULFUR_QUARTZ, 0.2f, 200, "misc");
 		ShapedRecipeJsonBuilder.create(RecipeCategory.BUILDING_BLOCKS, CinderscapesBlocks.SULFUR_QUARTZ_BLOCK, 1)
@@ -177,54 +148,17 @@ public class CinderscapesRecipeProvider extends FabricRecipeProvider {
 				.criterion("has_quartz_blocks", InventoryChangedCriterion.Conditions.items(CinderscapesBlocks.SULFUR_QUARTZ_BLOCK))
 				.offerTo(exporter);
 		offerStonecuttingRecipe(exporter, RecipeCategory.BUILDING_BLOCKS, CinderscapesBlocks.SULFUR_QUARTZ_PILLAR, CinderscapesBlocks.SULFUR_QUARTZ_BLOCK);
-		createSlabRecipe(RecipeCategory.BUILDING_BLOCKS, CinderscapesBlocks.SULFUR_QUARTZ_SLAB, Ingredient.ofItems(CinderscapesBlocks.CHISELED_SULFUR_QUARTZ_BLOCK, CinderscapesBlocks.SULFUR_QUARTZ_BLOCK, CinderscapesBlocks.SULFUR_QUARTZ_PILLAR))
-				.criterion("has_quartz_blocks", InventoryChangedCriterion.Conditions.items(getItemTagPredicate(CinderscapesItemTags.SULFUR_QUARTZ_CONVERTIBLES)))
-				.offerTo(exporter);
-		offerStonecuttingRecipe(exporter, RecipeCategory.BUILDING_BLOCKS, CinderscapesBlocks.SULFUR_QUARTZ_SLAB, CinderscapesBlocks.SULFUR_QUARTZ_BLOCK, 2);
-		createStairsRecipe(CinderscapesBlocks.SULFUR_QUARTZ_STAIRS, Ingredient.ofItems(CinderscapesBlocks.CHISELED_SULFUR_QUARTZ_BLOCK, CinderscapesBlocks.SULFUR_QUARTZ_BLOCK, CinderscapesBlocks.SULFUR_QUARTZ_PILLAR))
-				.criterion("has_quartz_blocks", InventoryChangedCriterion.Conditions.items(getItemTagPredicate(CinderscapesItemTags.SULFUR_QUARTZ_CONVERTIBLES)))
-				.offerTo(exporter);
-		offerStonecuttingRecipe(exporter, RecipeCategory.BUILDING_BLOCKS, CinderscapesBlocks.SULFUR_QUARTZ_STAIRS, CinderscapesBlocks.SULFUR_QUARTZ_BLOCK);
+
 		offerSmelting(exporter, List.of(CinderscapesBlocks.SULFUR_QUARTZ_BLOCK), RecipeCategory.BUILDING_BLOCKS, CinderscapesBlocks.SMOOTH_SULFUR_QUARTZ, 0.1f, 200, "building_blocks");
-		offerSlabRecipe(exporter, RecipeCategory.BUILDING_BLOCKS, CinderscapesBlocks.SMOOTH_SULFUR_QUARTZ_SLAB, CinderscapesBlocks.SMOOTH_SULFUR_QUARTZ);
-		offerStonecuttingRecipe(exporter, RecipeCategory.BUILDING_BLOCKS, CinderscapesBlocks.SMOOTH_SULFUR_QUARTZ_SLAB, CinderscapesBlocks.SMOOTH_SULFUR_QUARTZ, 2);
-		createStairsRecipe(CinderscapesBlocks.SMOOTH_SULFUR_QUARTZ_STAIRS, Ingredient.ofItems(CinderscapesBlocks.SMOOTH_SULFUR_QUARTZ))
-				.criterion("has_smooth_quartz", InventoryChangedCriterion.Conditions.items(CinderscapesBlocks.SMOOTH_SULFUR_QUARTZ))
-				.offerTo(exporter);
-		offerStonecuttingRecipe(exporter, RecipeCategory.BUILDING_BLOCKS, CinderscapesBlocks.SMOOTH_SULFUR_QUARTZ_STAIRS, CinderscapesBlocks.SMOOTH_SULFUR_QUARTZ);
 
 
 		// wood recipes
-		offerSingleOutputShapelessRecipe(exporter, CinderscapesBlocks.SCORCHED_BUTTON, CinderscapesBlocks.SCORCHED_PLANKS, "redstone");
-		createDoorRecipe(CinderscapesBlocks.SCORCHED_DOOR, Ingredient.ofItems(CinderscapesBlocks.SCORCHED_PLANKS))
-				.criterion("has_planks", InventoryChangedCriterion.Conditions.items(CinderscapesBlocks.SCORCHED_PLANKS))
-				.offerTo(exporter);
-		createFenceRecipe(CinderscapesBlocks.SCORCHED_FENCE, Ingredient.ofItems(CinderscapesBlocks.SCORCHED_PLANKS))
-				.criterion("has_planks", InventoryChangedCriterion.Conditions.items(CinderscapesBlocks.SCORCHED_PLANKS))
-				.offerTo(exporter);
-		createFenceGateRecipe(CinderscapesBlocks.SCORCHED_FENCE_GATE, Ingredient.ofItems(CinderscapesBlocks.SCORCHED_PLANKS))
-				.criterion("has_planks", InventoryChangedCriterion.Conditions.items(CinderscapesBlocks.SCORCHED_PLANKS))
-				.offerTo(exporter);
-		offerHangingSignRecipe(exporter, CinderscapesItems.SCORCHED_HANGING_SIGN, CinderscapesBlocks.STRIPPED_SCORCHED_STEM);
-		ShapedRecipeJsonBuilder.create(RecipeCategory.BUILDING_BLOCKS, CinderscapesBlocks.SCORCHED_HYPHAE, 3)
-				.group("bark")
-				.pattern("LL")
-				.pattern("LL")
-				.input('L', CinderscapesBlocks.SCORCHED_STEM)
-				.criterion("has_logs", InventoryChangedCriterion.Conditions.items(CinderscapesBlocks.SCORCHED_STEM))
-				.offerTo(exporter);
-		offerPlanksRecipe(exporter, CinderscapesBlocks.SCORCHED_PLANKS, CinderscapesItemTags.SCORCHED_STEMS, 4);
-		offerPressurePlateRecipe(exporter, CinderscapesBlocks.SCORCHED_PRESSURE_PLATE, CinderscapesBlocks.SCORCHED_PLANKS);
-		createSignRecipe(CinderscapesItems.SCORCHED_SIGN, Ingredient.ofItems(CinderscapesBlocks.SCORCHED_PLANKS))
-				.criterion("has_planks", InventoryChangedCriterion.Conditions.items(CinderscapesBlocks.SCORCHED_PLANKS))
-				.offerTo(exporter);
-		offerSlabRecipe(exporter, RecipeCategory.BUILDING_BLOCKS, CinderscapesBlocks.SCORCHED_SLAB, CinderscapesBlocks.SCORCHED_PLANKS);
-		createStairsRecipe(CinderscapesBlocks.SCORCHED_STAIRS, Ingredient.ofItems(CinderscapesBlocks.SCORCHED_PLANKS))
-				.criterion("has_planks", InventoryChangedCriterion.Conditions.items(CinderscapesBlocks.SCORCHED_PLANKS))
-				.offerTo(exporter);
-		createTrapdoorRecipe(CinderscapesBlocks.SCORCHED_TRAPDOOR, Ingredient.ofItems(CinderscapesBlocks.SCORCHED_PLANKS))
-				.criterion("has_planks", InventoryChangedCriterion.Conditions.items(CinderscapesBlocks.SCORCHED_PLANKS))
-				.offerTo(exporter);
+		ShapelessRecipeJsonBuilder.create(RecipeCategory.BUILDING_BLOCKS, Items.WARPED_PLANKS, 4)
+				.input(CinderscapesItemTags.UMBRAL_STEMS)
+				.group("planks")
+				.criterion("has_logs", conditionsFromTag(CinderscapesItemTags.UMBRAL_STEMS))
+				.offerTo(exporter, "cinderscapes:umbral_planks");
+
 		ShapedRecipeJsonBuilder.create(RecipeCategory.BUILDING_BLOCKS, CinderscapesBlocks.STRIPPED_SCORCHED_HYPHAE, 3)
 				.group("bark")
 				.pattern("LL")
@@ -233,17 +167,6 @@ public class CinderscapesRecipeProvider extends FabricRecipeProvider {
 				.criterion("has_logs", InventoryChangedCriterion.Conditions.items(CinderscapesBlocks.STRIPPED_SCORCHED_STEM))
 				.offerTo(exporter);
 
-		offerSingleOutputShapelessRecipe(exporter, CinderscapesBlocks.UMBRAL_BUTTON, CinderscapesBlocks.UMBRAL_PLANKS, "redstone");
-		createDoorRecipe(CinderscapesBlocks.UMBRAL_DOOR, Ingredient.ofItems(CinderscapesBlocks.UMBRAL_PLANKS))
-				.criterion("has_planks", InventoryChangedCriterion.Conditions.items(CinderscapesBlocks.UMBRAL_PLANKS))
-				.offerTo(exporter);
-		createFenceRecipe(CinderscapesBlocks.UMBRAL_FENCE, Ingredient.ofItems(CinderscapesBlocks.UMBRAL_PLANKS))
-				.criterion("has_planks", InventoryChangedCriterion.Conditions.items(CinderscapesBlocks.UMBRAL_PLANKS))
-				.offerTo(exporter);
-		createFenceGateRecipe(CinderscapesBlocks.UMBRAL_FENCE_GATE, Ingredient.ofItems(CinderscapesBlocks.UMBRAL_PLANKS))
-				.criterion("has_planks", InventoryChangedCriterion.Conditions.items(CinderscapesBlocks.UMBRAL_PLANKS))
-				.offerTo(exporter);
-		offerHangingSignRecipe(exporter, CinderscapesItems.UMBRAL_HANGING_SIGN, CinderscapesBlocks.STRIPPED_UMBRAL_STEM);
 		ShapedRecipeJsonBuilder.create(RecipeCategory.BUILDING_BLOCKS, CinderscapesBlocks.UMBRAL_HYPHAE, 3)
 				.group("bark")
 				.pattern("LL")
@@ -251,18 +174,7 @@ public class CinderscapesRecipeProvider extends FabricRecipeProvider {
 				.input('L', CinderscapesBlocks.UMBRAL_STEM)
 				.criterion("has_logs", InventoryChangedCriterion.Conditions.items(CinderscapesBlocks.UMBRAL_STEM))
 				.offerTo(exporter);
-		offerPlanksRecipe(exporter, CinderscapesBlocks.UMBRAL_PLANKS, CinderscapesItemTags.UMBRAL_STEMS, 4);
-		offerPressurePlateRecipe(exporter, CinderscapesBlocks.UMBRAL_PRESSURE_PLATE, CinderscapesBlocks.UMBRAL_PLANKS);
-		createSignRecipe(CinderscapesItems.UMBRAL_SIGN, Ingredient.ofItems(CinderscapesBlocks.UMBRAL_PLANKS))
-				.criterion("has_planks", InventoryChangedCriterion.Conditions.items(CinderscapesBlocks.UMBRAL_PLANKS))
-				.offerTo(exporter);
-		offerSlabRecipe(exporter, RecipeCategory.BUILDING_BLOCKS, CinderscapesBlocks.UMBRAL_SLAB, CinderscapesBlocks.UMBRAL_PLANKS);
-		createStairsRecipe(CinderscapesBlocks.UMBRAL_STAIRS, Ingredient.ofItems(CinderscapesBlocks.UMBRAL_PLANKS))
-				.criterion("has_planks", InventoryChangedCriterion.Conditions.items(CinderscapesBlocks.UMBRAL_PLANKS))
-				.offerTo(exporter);
-		createTrapdoorRecipe(CinderscapesBlocks.UMBRAL_TRAPDOOR, Ingredient.ofItems(CinderscapesBlocks.UMBRAL_PLANKS))
-				.criterion("has_planks", InventoryChangedCriterion.Conditions.items(CinderscapesBlocks.UMBRAL_PLANKS))
-				.offerTo(exporter);
+
 		ShapedRecipeJsonBuilder.create(RecipeCategory.BUILDING_BLOCKS, CinderscapesBlocks.STRIPPED_UMBRAL_HYPHAE, 3)
 				.group("bark")
 				.pattern("LL")

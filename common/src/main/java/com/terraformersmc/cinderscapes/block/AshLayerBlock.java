@@ -21,7 +21,7 @@ public class AshLayerBlock extends Block {
     static final VoxelShape ONE = Block.createCuboidShape(0.0, 0.0, 0.0, 16.0, 2.0, 16.0);
 
     public AshLayerBlock(Settings settings) {
-        super(settings);
+        super(settings.breakInstantly());
     }
 
     public boolean canPathfindThrough(BlockState state, BlockView world, BlockPos pos, NavigationType type) {

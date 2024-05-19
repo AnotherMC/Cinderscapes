@@ -13,20 +13,20 @@ import net.minecraft.data.server.recipe.ShapedRecipeJsonBuilder;
 import net.minecraft.data.server.recipe.ShapelessRecipeJsonBuilder;
 import net.minecraft.item.Item;
 import net.minecraft.item.Items;
-import net.minecraft.predicate.NumberRange;
 import net.minecraft.predicate.item.ItemPredicate;
 import net.minecraft.recipe.Ingredient;
 import net.minecraft.recipe.book.RecipeCategory;
+import net.minecraft.registry.RegistryWrapper;
 import net.minecraft.registry.tag.ItemTags;
 import net.minecraft.registry.tag.TagKey;
 import net.minecraft.util.Identifier;
 
 import java.util.List;
-import java.util.Optional;
+import java.util.concurrent.CompletableFuture;
 
 public class CinderscapesRecipeProvider extends FabricRecipeProvider {
-	protected CinderscapesRecipeProvider(FabricDataOutput dataOutput) {
-		super(dataOutput);
+	protected CinderscapesRecipeProvider(FabricDataOutput output, CompletableFuture<RegistryWrapper.WrapperLookup> registriesFuture) {
+		super(output, registriesFuture);
 	}
 
 	@Override
@@ -84,7 +84,22 @@ public class CinderscapesRecipeProvider extends FabricRecipeProvider {
 				.criterion("has_sulfurs", InventoryChangedCriterion.Conditions.items(getItemTagPredicate(CinderscapesItemTags.SULFURS)))
 				.offerTo(exporter);
 
-		offerReversibleCompactingRecipes(exporter, RecipeCategory.MISC, CinderscapesItems.SULFUR, RecipeCategory.BUILDING_BLOCKS, CinderscapesBlocks.SULFUR_BLOCK);
+		offerReversibleCompactingRecipes(exporter,
+				RecipeCategory.MISC, CinderscapesItems.SULFUR,
+				RecipeCategory.BUILDING_BLOCKS,
+				CinderscapesBlocks.SULFUR_BLOCK);
+
+		offerBlasting(exporter,
+				List.of(CinderscapesItems.SULFUR_ORE),
+				RecipeCategory.MISC,
+				CinderscapesItems.SULFUR,
+				0.1f, 100, "blasting");
+
+		offerSmelting(exporter,
+				List.of(CinderscapesItems.SULFUR_ORE),
+				RecipeCategory.MISC,
+				CinderscapesItems.SULFUR,
+				0.1f, 200, "smelting");
 
 
 		// quartz recipes
@@ -186,16 +201,7 @@ public class CinderscapesRecipeProvider extends FabricRecipeProvider {
 
 	// Returns an ItemPredicate matching any item in the provided ItemTag key.
 	private static ItemPredicate getItemTagPredicate(TagKey<Item> itemTagKey) {
-		return new ItemPredicate(
-				Optional.of(itemTagKey),
-				Optional.empty(),
-				NumberRange.IntRange.ANY,
-				NumberRange.IntRange.ANY,
-				List.of(),
-				List.of(),
-				Optional.empty(),
-				Optional.empty()
-		);
+		return ItemPredicate.Builder.create().tag(itemTagKey).build();
 	}
 
 	@Override

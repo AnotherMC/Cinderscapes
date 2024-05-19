@@ -122,7 +122,7 @@ subprojects {
         modImplementation "me.shedaniel.cloth:cloth-config-fabric:${project.clothconfig_version}"
     }
 
-    version = rootProject.version
+    version = rootProject.version + "+polymania"
 
     runClient.enabled = false
 

@@ -172,10 +172,6 @@ public final class CinderscapesConfiguredFeatures {
                 )
         );
 
-        registerPolypite(registerable, POLYPITE_QUARTZ, (PolypiteQuartzBlock) CinderscapesBlocks.POLYPITE_QUARTZ);
-        registerPolypite(registerable, POLYPITE_SULFUR_QUARTZ, (PolypiteQuartzBlock) CinderscapesBlocks.POLYPITE_SULFUR_QUARTZ);
-        registerPolypite(registerable, POLYPITE_ROSE_QUARTZ, (PolypiteQuartzBlock) CinderscapesBlocks.POLYPITE_ROSE_QUARTZ);
-        registerPolypite(registerable, POLYPITE_SMOKY_QUARTZ, (PolypiteQuartzBlock) CinderscapesBlocks.POLYPITE_SMOKY_QUARTZ);
     }
 
     private static RegistryKey<ConfiguredFeature<?, ?>> createRegistryKey(String name) {

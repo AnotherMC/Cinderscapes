@@ -179,10 +179,6 @@ public class CinderscapesPlacedFeatures {
         CinderscapesRegistry.register(registerable, FLOOR_SHARD_SMOKY_QUARTZ, CinderscapesConfiguredFeatures.FLOOR_SHARD_SMOKY_QUARTZ);
         CinderscapesRegistry.register(registerable, FLOOR_SHARDS, CinderscapesConfiguredFeatures.FLOOR_SHARDS, PlacedFeatures.createCountExtraModifier(1, 0.5f, 1), new SafelistRangeFloorPlacementModifier(YOffset.aboveBottom(20), YOffset.belowTop(20), SHARD_SAFELIST), BiomePlacementModifier.of());
 
-        CinderscapesRegistry.register(registerable, POLYPITE_QUARTZ, CinderscapesConfiguredFeatures.POLYPITE_QUARTZ, CountPlacementModifier.of(128), PlacedFeatures.TEN_ABOVE_AND_BELOW_RANGE, RandomOffsetPlacementModifier.of(UniformIntProvider.create(9, 15), UniformIntProvider.create(4, 7)), BiomePlacementModifier.of());
-        CinderscapesRegistry.register(registerable, POLYPITE_SULFUR_QUARTZ, CinderscapesConfiguredFeatures.POLYPITE_SULFUR_QUARTZ, CountPlacementModifier.of(128), PlacedFeatures.TEN_ABOVE_AND_BELOW_RANGE, RandomOffsetPlacementModifier.of(UniformIntProvider.create(9, 15), UniformIntProvider.create(4, 7)), BiomePlacementModifier.of());
-        CinderscapesRegistry.register(registerable, POLYPITE_ROSE_QUARTZ, CinderscapesConfiguredFeatures.POLYPITE_ROSE_QUARTZ, CountPlacementModifier.of(128), PlacedFeatures.TEN_ABOVE_AND_BELOW_RANGE, RandomOffsetPlacementModifier.of(UniformIntProvider.create(9, 15), UniformIntProvider.create(4, 7)), BiomePlacementModifier.of());
-        CinderscapesRegistry.register(registerable, POLYPITE_SMOKY_QUARTZ, CinderscapesConfiguredFeatures.POLYPITE_SMOKY_QUARTZ, CountPlacementModifier.of(128), PlacedFeatures.TEN_ABOVE_AND_BELOW_RANGE, RandomOffsetPlacementModifier.of(UniformIntProvider.create(9, 15), UniformIntProvider.create(4, 7)), BiomePlacementModifier.of());
     }
 
     private static RegistryKey<PlacedFeature> createRegistryKey(String name) {

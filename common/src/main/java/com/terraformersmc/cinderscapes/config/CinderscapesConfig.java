@@ -7,7 +7,7 @@ import me.shedaniel.autoconfig.annotation.Config;
 import me.shedaniel.autoconfig.annotation.ConfigEntry;
 import me.shedaniel.autoconfig.serializer.GsonConfigSerializer;
 
-@Config(name = Cinderscapes.NAMESPACE)
+@Config(name = Cinderscapes.MOD_ID)
 public final class CinderscapesConfig implements ConfigData {
     @ConfigEntry.Gui.Excluded
     public static CinderscapesConfig INSTANCE;
@@ -18,6 +18,8 @@ public final class CinderscapesConfig implements ConfigData {
     public boolean enableAshFall = true;
 
     public boolean easterEggs = false;
+
+    public boolean limitAshParticles = false;
 
     @ConfigEntry.Gui.Tooltip
     @ConfigEntry.BoundedDiscrete(max = 15)

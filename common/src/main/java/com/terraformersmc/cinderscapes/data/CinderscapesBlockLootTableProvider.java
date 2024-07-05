@@ -8,6 +8,7 @@ import net.fabricmc.fabric.api.datagen.v1.FabricDataOutput;
 import net.fabricmc.fabric.api.datagen.v1.provider.FabricBlockLootTableProvider;
 import net.minecraft.block.Blocks;
 import net.minecraft.data.server.loottable.vanilla.VanillaBlockLootTableGenerator;
+import net.minecraft.enchantment.Enchantment;
 import net.minecraft.enchantment.Enchantments;
 import net.minecraft.item.Items;
 import net.minecraft.loot.LootPool;
@@ -22,6 +23,7 @@ import net.minecraft.loot.function.SetCountLootFunction;
 import net.minecraft.loot.provider.number.ConstantLootNumberProvider;
 import net.minecraft.loot.provider.number.UniformLootNumberProvider;
 import net.minecraft.predicate.StatePredicate;
+import net.minecraft.registry.RegistryKeys;
 import net.minecraft.registry.RegistryWrapper;
 
 import java.util.concurrent.CompletableFuture;
@@ -33,6 +35,8 @@ public class CinderscapesBlockLootTableProvider extends FabricBlockLootTableProv
 
 	@Override
 	public void generate() {
+		RegistryWrapper.Impl<Enchantment> enchantmentRegistry = this.registryLookup.getWrapperOrThrow(RegistryKeys.ENCHANTMENT);
+
 		// simple blocks
 		addDrop(CinderscapesBlocks.ASH_BLOCK);
 		addDrop(CinderscapesBlocks.CHISELED_ROSE_QUARTZ_BLOCK);
@@ -110,12 +114,12 @@ public class CinderscapesBlockLootTableProvider extends FabricBlockLootTableProv
 			.pool(
 				LootPool.builder().conditionally(BlockStatePropertyLootCondition.builder(CinderscapesBlocks.BRAMBLE_BERRY_BUSH).properties(StatePredicate.Builder.create().exactMatch(BrambleBerryBushBlock.AGE, 3)))
 					.with(ItemEntry.builder(CinderscapesItems.BRAMBLE_BERRIES)).apply(SetCountLootFunction.builder(UniformLootNumberProvider.create(2.0f, 3.0f)))
-					.apply(ApplyBonusLootFunction.uniformBonusCount(Enchantments.FORTUNE))
+					.apply(ApplyBonusLootFunction.uniformBonusCount(enchantmentRegistry.getOrThrow(Enchantments.FORTUNE)))
 			)
 			.pool(
 				LootPool.builder().conditionally(BlockStatePropertyLootCondition.builder(CinderscapesBlocks.BRAMBLE_BERRY_BUSH).properties(StatePredicate.Builder.create().exactMatch(BrambleBerryBushBlock.AGE, 2)))
 					.with(ItemEntry.builder(CinderscapesItems.BRAMBLE_BERRIES)).apply(SetCountLootFunction.builder(UniformLootNumberProvider.create(1.0f, 2.0f)))
-					.apply(ApplyBonusLootFunction.uniformBonusCount(Enchantments.FORTUNE))
+					.apply(ApplyBonusLootFunction.uniformBonusCount(enchantmentRegistry.getOrThrow(Enchantments.FORTUNE)))
 			)
 		));
 

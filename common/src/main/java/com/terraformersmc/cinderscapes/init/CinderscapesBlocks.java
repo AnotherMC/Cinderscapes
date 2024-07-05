@@ -186,7 +186,7 @@ public class CinderscapesBlocks {
         POTTED_UMBRAL_FUNGUS = CinderscapesRegistry.register("potted_umbral_fungus", new FlowerPotBlock(UMBRAL_FUNGUS, AbstractBlock.Settings.copy(Blocks.POTTED_WARPED_FUNGUS)));
 
         UMBRAL_WART_BLOCK = CinderscapesRegistry.register("umbral_wart_block", new CinderscapesTransparentBlock(AbstractBlock.Settings.copy(Blocks.WARPED_WART_BLOCK).mapColor(MapColor.BLUE).nonOpaque()));
-        UMBRAL_FLESH_BLOCK = CinderscapesRegistry.register("umbral_flesh_block", new CinderscapesTransparentBlock(AbstractBlock.Settings.copy(UMBRAL_WART_BLOCK).luminance(15)));
+        UMBRAL_FLESH_BLOCK = CinderscapesRegistry.register("umbral_flesh_block", new CinderscapesTransparentBlock(AbstractBlock.Settings.copy(UMBRAL_WART_BLOCK).luminance((s) -> 15)));
         // Other
 
         TWILIGHT_VINE_BLOCK = CinderscapesRegistry.register("twilight_vine_block", new Block(AbstractBlock.Settings.create().mapColor(MapColor.DARK_AQUA).instrument(NoteBlockInstrument.BASS).strength(1.0F).sounds(BlockSoundGroup.NETHER_STEM)));

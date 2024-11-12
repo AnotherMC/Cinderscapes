@@ -12,7 +12,7 @@ public class CinderscapesBlockTags {
     public static final TagKey<Block> UMBRAL_STEMS = CinderscapesBlockTags.of("umbral_stems");
 
     public static final TagKey<Block> STRIPPED_LOGS = CinderscapesBlockTags.of(Identifier.of("c", "stripped_logs"));
-    public static final TagKey<Block> STRIPPED_WOOD = CinderscapesBlockTags.of(Identifier.of("c", "stripped_wood"));
+    public static final TagKey<Block> STRIPPED_WOODS = CinderscapesBlockTags.of(Identifier.of("c", "stripped_woods"));
 
     @SuppressWarnings("UnnecessaryReturnStatement")
     private CinderscapesBlockTags() {

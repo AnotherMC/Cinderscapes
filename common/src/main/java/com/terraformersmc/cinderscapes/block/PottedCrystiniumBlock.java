@@ -3,9 +3,7 @@ package com.terraformersmc.cinderscapes.block;
 import com.terraformersmc.cinderscapes.init.CinderscapesBlocks;
 import net.fabricmc.api.EnvType;
 import net.fabricmc.api.Environment;
-import net.fabricmc.fabric.api.object.builder.v1.block.FabricBlockSettings;
 import net.minecraft.block.BlockState;
-import net.minecraft.block.Blocks;
 import net.minecraft.block.FlowerPotBlock;
 import net.minecraft.particle.ParticleTypes;
 import net.minecraft.util.math.BlockPos;
@@ -13,8 +11,8 @@ import net.minecraft.util.math.random.Random;
 import net.minecraft.world.World;
 
 public class PottedCrystiniumBlock extends FlowerPotBlock {
-    public PottedCrystiniumBlock() {
-        super(CinderscapesBlocks.CRYSTINIUM, FabricBlockSettings.copyOf(Blocks.POTTED_ALLIUM));
+    public PottedCrystiniumBlock(Settings settings) {
+        super(CinderscapesBlocks.CRYSTINIUM, settings);
     }
 
     @Override

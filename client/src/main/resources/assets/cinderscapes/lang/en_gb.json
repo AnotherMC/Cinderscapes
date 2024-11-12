@@ -1,5 +1,9 @@
 {
   "block.cinderscapes.chiseled_sulfur_quartz_block": "Chiselled Sulfur Quartz Block",
   "block.cinderscapes.chiseled_rose_quartz_block": "Chiselled Rose Quartz Block",
-  "block.cinderscapes.chiseled_smoky_quartz_block": "Chiselled Smoky Quartz Block"
+  "block.cinderscapes.chiseled_smoky_quartz_block": "Chiselled Smoky Quartz Block",
+
+  "item.cinderscapes.chiseled_sulfur_quartz_block": "Chiselled Sulfur Quartz Block",
+  "item.cinderscapes.chiseled_rose_quartz_block": "Chiselled Rose Quartz Block",
+  "item.cinderscapes.chiseled_smoky_quartz_block": "Chiselled Smoky Quartz Block"
 }

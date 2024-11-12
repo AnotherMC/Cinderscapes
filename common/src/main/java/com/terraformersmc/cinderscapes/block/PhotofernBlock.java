@@ -2,8 +2,10 @@ package com.terraformersmc.cinderscapes.block;
 
 import com.terraformersmc.cinderscapes.init.CinderscapesBlocks;
 import com.terraformersmc.cinderscapes.util.StateShapeRegistry;
-import net.fabricmc.fabric.api.object.builder.v1.block.FabricBlockSettings;
-import net.minecraft.block.*;
+import net.minecraft.block.Block;
+import net.minecraft.block.BlockState;
+import net.minecraft.block.Fertilizable;
+import net.minecraft.block.TallPlantBlock;
 import net.minecraft.server.world.ServerWorld;
 import net.minecraft.util.math.BlockPos;
 import net.minecraft.util.math.random.Random;
@@ -12,8 +14,8 @@ import net.minecraft.world.WorldView;
 
 public class PhotofernBlock extends CinderscapesNetherPlantBlock implements Fertilizable {
 
-	public PhotofernBlock() {
-		super(FabricBlockSettings.copyOf(Blocks.WARPED_ROOTS).mapColor(MapColor.PURPLE));
+	public PhotofernBlock(Settings settings) {
+		super(settings);
 
 		StateShapeRegistry.put(this, (state) -> Block.createCuboidShape(2.0, 0.0, 2.0, 14.0, 12.0, 14.0));
 	}

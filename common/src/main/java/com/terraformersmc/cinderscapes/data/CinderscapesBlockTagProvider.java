@@ -217,7 +217,7 @@ public class CinderscapesBlockTagProvider extends FabricTagProvider.BlockTagProv
 			.add(CinderscapesBlocks.STRIPPED_SCORCHED_STEM)
 			.add(CinderscapesBlocks.STRIPPED_UMBRAL_STEM);
 
-		getOrCreateTagBuilder(CinderscapesBlockTags.STRIPPED_WOOD)
+		getOrCreateTagBuilder(CinderscapesBlockTags.STRIPPED_WOODS)
 			.add(CinderscapesBlocks.STRIPPED_SCORCHED_HYPHAE)
 			.add(CinderscapesBlocks.STRIPPED_UMBRAL_HYPHAE);
 

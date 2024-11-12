@@ -98,8 +98,8 @@ public class CinderscapesItemTagProvider extends FabricTagProvider.ItemTagProvid
 
 
 		// conventional tags
-		getOrCreateTagBuilder(ConventionalItemTags.BERRIES_FOODS)
-			.add(CinderscapesItems.BRAMBLE_BERRIES);
+		getOrCreateTagBuilder(ConventionalItemTags.BERRY_FOODS)
+				.add(CinderscapesItems.BRAMBLE_BERRIES);
 
 		getOrCreateTagBuilder(CinderscapesItemTags.DARK_ASHES_DUSTS)
 			.add(CinderscapesItems.ASH_PILE);
@@ -146,7 +146,7 @@ public class CinderscapesItemTagProvider extends FabricTagProvider.ItemTagProvid
 
 		copy(CinderscapesBlockTags.STRIPPED_LOGS, CinderscapesItemTags.STRIPPED_LOGS);
 
-		copy(CinderscapesBlockTags.STRIPPED_WOOD, CinderscapesItemTags.STRIPPED_WOOD);
+		copy(CinderscapesBlockTags.STRIPPED_WOODS, CinderscapesItemTags.STRIPPED_WOODS);
 
 		getOrCreateTagBuilder(CinderscapesItemTags.SULFURS_ORES)
 			.add(CinderscapesBlocks.SULFUR_ORE.asItem());
@@ -182,6 +182,7 @@ public class CinderscapesItemTagProvider extends FabricTagProvider.ItemTagProvid
 			.add(CinderscapesItems.ROSE_QUARTZ)
 			.add(CinderscapesItems.SMOKY_QUARTZ)
 			.add(CinderscapesItems.SULFUR_QUARTZ);
+
 		getOrCreateTagBuilder(CinderscapesItemTags.SULFUR_ORES)
 			.add(CinderscapesBlocks.SULFUR_ORE.asItem());
 	}

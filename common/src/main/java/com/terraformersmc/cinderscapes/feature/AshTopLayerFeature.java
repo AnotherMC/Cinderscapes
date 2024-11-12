@@ -29,7 +29,7 @@ public class AshTopLayerFeature extends Feature<DefaultFeatureConfig> {
         StructureWorldAccess world = context.getWorld();
         if (VALID_BIOMES == null) {
             VALID_BIOMES = new HashSet<>();
-            VALID_BIOMES.add(world.getRegistryManager().get(RegistryKeys.BIOME).get(CinderscapesBiomes.ASHY_SHOALS));
+            VALID_BIOMES.add(world.getRegistryManager().getOrThrow(RegistryKeys.BIOME).get(CinderscapesBiomes.ASHY_SHOALS));
             // TODO: fix this or figure out better system
             /*world.getRegistryManager().get(Registry.BIOME_KEY).stream()
                     .filter(biome -> biome.getGenerationSettings().isFeatureAllowed(CinderscapesPlacedFeatures.ASH_TOP_LAYER.value()))

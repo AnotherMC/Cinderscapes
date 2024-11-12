@@ -1,7 +1,0 @@
-{
-  "parent": "minecraft:block/cube_column",
-  "textures": {
-    "end": "cinderscapes:block/withered_stem_top",
-    "side": "cinderscapes:block/withered_stem"
-  }
-}

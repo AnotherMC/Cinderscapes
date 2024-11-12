@@ -28,7 +28,8 @@ public class LuminousGroveSurfaceBuilder extends BiolithSurfaceBuilder {
         boolean inAir = false;
 
         // Set in-biome netherrack
-        for (int y = chunk.getTopY() - 6; y >= seaLevel - 1; --y) {
+        // TODO: It would be nicer to make this start below the ceiling bedrock.
+        for (int y = chunk.getTopYInclusive(); y >= seaLevel - 1; --y) {
             BlockState state = column.getState(y);
             if (state.isAir()) {
                 inAir = true;

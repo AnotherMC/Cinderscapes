@@ -16,7 +16,7 @@ public class Cinderscapes implements ModInitializer {
 	public static final Logger LOGGER = LogManager.getLogger(StringUtils.capitalize(MOD_ID));
 
 	private static Boolean initialized = false;
-	private static final ArrayList<Runnable> runnables = new ArrayList<>(1);
+	private static final ArrayList<Runnable> RUNNABLES = new ArrayList<>(1);
 
 	@Override
 	public void onInitialize() {
@@ -37,7 +37,7 @@ public class Cinderscapes implements ModInitializer {
 
 		// At this point Cinderscapes is completely initialized.
 		initialized = true;
-		for (Runnable callback : runnables) {
+		for (Runnable callback : RUNNABLES) {
 			callback.run();
 		}
 	}
@@ -46,7 +46,7 @@ public class Cinderscapes implements ModInitializer {
 		if (initialized) {
 			callback.run();
 		} else {
-			runnables.add(callback);
+			RUNNABLES.add(callback);
 		}
 	}
 }

@@ -9,11 +9,12 @@ import net.minecraft.state.property.EnumProperty;
 import net.minecraft.util.StringIdentifiable;
 import net.minecraft.util.math.BlockPos;
 import net.minecraft.util.math.Direction;
+import net.minecraft.util.math.random.Random;
 import net.minecraft.util.shape.VoxelShape;
 import net.minecraft.world.BlockView;
 import net.minecraft.world.World;
-import net.minecraft.world.WorldAccess;
 import net.minecraft.world.WorldView;
+import net.minecraft.world.tick.ScheduledTickView;
 
 import java.util.Locale;
 
@@ -26,7 +27,6 @@ public class GhastlyEctoplasmBlock extends Block {
     }
 
     @Override
-    @SuppressWarnings("deprecation")
     public VoxelShape getOutlineShape(BlockState state, BlockView world, BlockPos pos, ShapeContext context) {
         return state.get(GhastlyEctoplasmBlock.TYPE) == GhastlyEctoplasmBlock.Type.BOTTOM ? Block.createCuboidShape(3.0D, 2.5D, 3.0D, 13.0D, 16.0D, 13.0D) : Block.createCuboidShape(1.0D, 0.0D, 1.0D, 15.0D, 16.0D, 15.0D);
     }
@@ -45,11 +45,11 @@ public class GhastlyEctoplasmBlock extends Block {
     }
 
     @Override
-    public BlockState getStateForNeighborUpdate(BlockState state, Direction direction, BlockState newState, WorldAccess world, BlockPos pos, BlockPos posFrom) {
+    public BlockState getStateForNeighborUpdate(BlockState state, WorldView world, ScheduledTickView tickView, BlockPos pos, Direction direction, BlockPos neighborPos, BlockState neighborState, Random random) {
         return evaluateState(state, pos, world);
     }
 
-    public BlockState evaluateState(BlockState currentState, BlockPos currentPos, WorldAccess world) {
+    public BlockState evaluateState(BlockState currentState, BlockPos currentPos, WorldView world) {
         BlockState aboveState = world.getBlockState(currentPos.up());
         BlockState belowState = world.getBlockState(currentPos.down());
         BlockState twoBelowState = world.getBlockState(currentPos.down(2));

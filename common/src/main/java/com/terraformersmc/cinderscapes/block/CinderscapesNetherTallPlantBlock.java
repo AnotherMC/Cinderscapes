@@ -15,7 +15,7 @@ import net.minecraft.world.BlockView;
 public class CinderscapesNetherTallPlantBlock extends TallPlantBlock {
     public static final MapCodec<CinderscapesNetherTallPlantBlock> CODEC = CinderscapesNetherTallPlantBlock.createCodec(CinderscapesNetherTallPlantBlock::new);
 
-    public CinderscapesNetherTallPlantBlock(Settings settings, StateShapeSupplier supplier) {
+    public CinderscapesNetherTallPlantBlock(StateShapeSupplier supplier, Settings settings) {
         super(settings);
 
         StateShapeRegistry.put(this, supplier);
@@ -38,7 +38,6 @@ public class CinderscapesNetherTallPlantBlock extends TallPlantBlock {
     }
 
     @Override
-    @SuppressWarnings("deprecation")
     public VoxelShape getOutlineShape(BlockState state, BlockView world, BlockPos pos, ShapeContext context) {
         return StateShapeRegistry.getShape(state);
     }

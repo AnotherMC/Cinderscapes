@@ -13,6 +13,7 @@ import net.minecraft.entity.EntityType;
 import net.minecraft.entity.LivingEntity;
 import net.minecraft.entity.player.PlayerEntity;
 import net.minecraft.item.ItemStack;
+import net.minecraft.server.world.ServerWorld;
 import net.minecraft.sound.SoundCategory;
 import net.minecraft.sound.SoundEvents;
 import net.minecraft.util.ActionResult;
@@ -47,8 +48,8 @@ public class BrambleBerryBushBlock extends SweetBerryBushBlock {
             if (!world.isClient && state.get(AGE) > 0 && (entity.lastRenderX != entity.getX() || entity.lastRenderZ != entity.getZ())) {
                 double d = Math.abs(entity.getX() - entity.lastRenderX);
                 double e = Math.abs(entity.getZ() - entity.lastRenderZ);
-                if (d >= 0.003000000026077032D || e >= 0.003000000026077032D) {
-                    entity.damage(world.getDamageSources().sweetBerryBush(), 1.0f);
+                if (world instanceof ServerWorld serverWorld && (d >= 0.003000000026077032D || e >= 0.003000000026077032D)) {
+                    entity.damage(serverWorld, world.getDamageSources().sweetBerryBush(), 1.0f);
                 }
             }
         }
@@ -75,7 +76,7 @@ public class BrambleBerryBushBlock extends SweetBerryBushBlock {
             world.setBlockState(pos, newState, 2);
             world.emitGameEvent(GameEvent.BLOCK_CHANGE, pos, GameEvent.Emitter.of(player, newState));
 
-            return ActionResult.success(world.isClient);
+            return ActionResult.SUCCESS;
         }
 
         return super.onUse(state, world, pos, player, hit);

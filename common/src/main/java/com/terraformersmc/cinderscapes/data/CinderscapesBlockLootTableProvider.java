@@ -7,7 +7,6 @@ import com.terraformersmc.cinderscapes.init.CinderscapesItems;
 import net.fabricmc.fabric.api.datagen.v1.FabricDataOutput;
 import net.fabricmc.fabric.api.datagen.v1.provider.FabricBlockLootTableProvider;
 import net.minecraft.block.Blocks;
-import net.minecraft.data.server.loottable.vanilla.VanillaBlockLootTableGenerator;
 import net.minecraft.enchantment.Enchantment;
 import net.minecraft.enchantment.Enchantments;
 import net.minecraft.item.Items;
@@ -35,7 +34,7 @@ public class CinderscapesBlockLootTableProvider extends FabricBlockLootTableProv
 
 	@Override
 	public void generate() {
-		RegistryWrapper.Impl<Enchantment> enchantmentRegistry = this.registryLookup.getWrapperOrThrow(RegistryKeys.ENCHANTMENT);
+		RegistryWrapper.Impl<Enchantment> enchantmentRegistry = this.registries.getOrThrow(RegistryKeys.ENCHANTMENT);
 
 		// simple blocks
 		addDrop(CinderscapesBlocks.ASH_BLOCK);
@@ -47,8 +46,8 @@ public class CinderscapesBlockLootTableProvider extends FabricBlockLootTableProv
 		addDrop(CinderscapesBlocks.CRYSTALLINE_SMOKY_QUARTZ, block -> oreDrops(block, CinderscapesItems.SMOKY_QUARTZ));
 		addDrop(CinderscapesBlocks.CRYSTALLINE_SULFUR_QUARTZ, block -> oreDrops(block, CinderscapesItems.SULFUR_QUARTZ));
 		addDrop(CinderscapesBlocks.CRYSTINIUM);
-		addDrop(CinderscapesBlocks.GHASTLY_ECTOPLASM, VanillaBlockLootTableGenerator::dropsWithShears);
-		addDrop(CinderscapesBlocks.PHOTOFERN, VanillaBlockLootTableGenerator::dropsWithShears);
+		addDrop(CinderscapesBlocks.GHASTLY_ECTOPLASM, this::dropsWithShears);
+		addDrop(CinderscapesBlocks.PHOTOFERN, this::dropsWithShears);
 		addDrop(CinderscapesBlocks.POLYPITE_QUARTZ, block -> oreDrops(block, Items.QUARTZ));
 		addDrop(CinderscapesBlocks.POLYPITE_ROSE_QUARTZ, block -> oreDrops(block, CinderscapesItems.ROSE_QUARTZ));
 		addDrop(CinderscapesBlocks.POLYPITE_SMOKY_QUARTZ, block -> oreDrops(block, CinderscapesItems.SMOKY_QUARTZ));
@@ -60,8 +59,8 @@ public class CinderscapesBlockLootTableProvider extends FabricBlockLootTableProv
 		addDrop(CinderscapesBlocks.ROSE_QUARTZ_PILLAR);
 		addDrop(CinderscapesBlocks.ROSE_QUARTZ_SLAB, this::slabDrops);
 		addDrop(CinderscapesBlocks.ROSE_QUARTZ_STAIRS);
-		addDrop(CinderscapesBlocks.SCORCHED_SHRUB, VanillaBlockLootTableGenerator::dropsWithShears);
-		addDrop(CinderscapesBlocks.SCORCHED_SPROUTS, VanillaBlockLootTableGenerator::dropsWithShears);
+		addDrop(CinderscapesBlocks.SCORCHED_SHRUB, this::dropsWithShears);
+		addDrop(CinderscapesBlocks.SCORCHED_SPROUTS, this::dropsWithShears);
 		addDrop(CinderscapesBlocks.SCORCHED_TENDRILS);
 		addDrop(CinderscapesBlocks.SMOKY_QUARTZ_BLOCK);
 		addDrop(CinderscapesBlocks.SMOKY_QUARTZ_BRICKS);
@@ -86,7 +85,7 @@ public class CinderscapesBlockLootTableProvider extends FabricBlockLootTableProv
 		addDrop(CinderscapesBlocks.SULFUR_QUARTZ_PILLAR);
 		addDrop(CinderscapesBlocks.SULFUR_QUARTZ_SLAB, this::slabDrops);
 		addDrop(CinderscapesBlocks.SULFUR_QUARTZ_STAIRS);
-		addDrop(CinderscapesBlocks.TWILIGHT_FESCUES, VanillaBlockLootTableGenerator::dropsWithShears);
+		addDrop(CinderscapesBlocks.TWILIGHT_FESCUES, this::dropsWithShears);
 		addDrop(CinderscapesBlocks.TWILIGHT_TENDRILS);
 		addDrop(CinderscapesBlocks.TWILIGHT_VINE_BLOCK);
 		addDrop(CinderscapesBlocks.UMBRAL_FLESH_BLOCK);

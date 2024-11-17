@@ -19,39 +19,43 @@ public class CinderscapesBiomeTagProvider extends FabricTagProvider<Biome> {
 	@Override
 	public void configure(RegistryWrapper.WrapperLookup registries) {
 		/*
-		 * Vanilla and Conventional biome categories
+		 * Vanilla biome tags
 		 */
 		getOrCreateTagBuilder(BiomeTags.IS_NETHER)
-			.addOptional(CinderscapesBiomes.ASHY_SHOALS)
-			.addOptional(CinderscapesBiomes.BLACKSTONE_SHALES)
-			.addOptional(CinderscapesBiomes.LUMINOUS_GROVE)
-			.addOptional(CinderscapesBiomes.QUARTZ_CAVERN);
+				.addOptional(CinderscapesBiomes.ASHY_SHOALS)
+				.addOptional(CinderscapesBiomes.BLACKSTONE_SHALES)
+				.addOptional(CinderscapesBiomes.LUMINOUS_GROVE)
+				.addOptional(CinderscapesBiomes.QUARTZ_CAVERN);
 
+
+		/*
+		 * Conventional biome tags
+		 */
 		getOrCreateTagBuilder(ConventionalBiomeTags.IS_NETHER_FOREST)
-			.addOptional(CinderscapesBiomes.LUMINOUS_GROVE);
-
-		getOrCreateTagBuilder(ConventionalBiomeTags.IS_WASTELAND)
-			.addOptional(CinderscapesBiomes.ASHY_SHOALS);
+				.addOptional(CinderscapesBiomes.LUMINOUS_GROVE);
 
 		getOrCreateTagBuilder(ConventionalBiomeTags.IS_VEGETATION_SPARSE)
-			.addOptional(CinderscapesBiomes.BLACKSTONE_SHALES);
+				.addOptional(CinderscapesBiomes.BLACKSTONE_SHALES);
+
+		getOrCreateTagBuilder(ConventionalBiomeTags.IS_WASTELAND)
+				.addOptional(CinderscapesBiomes.ASHY_SHOALS);
 
 
 		/*
 		 * Biome structure generation tags
 		 */
 		getOrCreateTagBuilder(BiomeTags.BASTION_REMNANT_HAS_STRUCTURE)
-			.addOptional(CinderscapesBiomes.ASHY_SHOALS)
-			.addOptional(CinderscapesBiomes.LUMINOUS_GROVE);
+				.addOptional(CinderscapesBiomes.ASHY_SHOALS)
+				.addOptional(CinderscapesBiomes.LUMINOUS_GROVE);
 
 		getOrCreateTagBuilder(BiomeTags.NETHER_FORTRESS_HAS_STRUCTURE)
-			.addOptional(CinderscapesBiomes.BLACKSTONE_SHALES);
+				.addOptional(CinderscapesBiomes.BLACKSTONE_SHALES);
 
 		getOrCreateTagBuilder(BiomeTags.NETHER_FOSSIL_HAS_STRUCTURE)
-			.addOptional(CinderscapesBiomes.ASHY_SHOALS)
-			.addOptional(CinderscapesBiomes.BLACKSTONE_SHALES);
+				.addOptional(CinderscapesBiomes.ASHY_SHOALS)
+				.addOptional(CinderscapesBiomes.BLACKSTONE_SHALES);
 
 		getOrCreateTagBuilder(BiomeTags.RUINED_PORTAL_NETHER_HAS_STRUCTURE)
-			.addOptional(CinderscapesBiomes.ASHY_SHOALS);
+				.addOptional(CinderscapesBiomes.ASHY_SHOALS);
 	}
 }

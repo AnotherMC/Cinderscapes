@@ -1,5 +1,6 @@
 package com.terraformersmc.cinderscapes;
 
+import com.terraformersmc.cinderscapes.init.CinderscapesArmorTrimItemModels;
 import com.terraformersmc.cinderscapes.init.CinderscapesBlocks;
 import net.fabricmc.api.ClientModInitializer;
 import net.fabricmc.api.EnvType;
@@ -17,6 +18,7 @@ public class CinderscapesClient implements ClientModInitializer {
 
     @Override
     public void onInitializeClient() {
+        CinderscapesArmorTrimItemModels.init();
 
         BlockRenderLayerMap.INSTANCE.putBlocks(RenderLayer.getTranslucent(),
                 // Ashy Shoals

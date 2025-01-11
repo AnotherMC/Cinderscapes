@@ -186,4 +186,9 @@ public class CinderscapesBlockLootTableProvider extends FabricBlockLootTableProv
 					))
 		));
 	}
+
+	@Override
+	public String getName() {
+		return "Cinderscapes Block Loot Tables";
+	}
 }

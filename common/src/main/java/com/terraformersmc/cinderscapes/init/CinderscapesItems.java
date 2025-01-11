@@ -186,8 +186,8 @@ public class CinderscapesItems {
         SCORCHED_BUTTON = CinderscapesRegistry.registerBlockItem("scorched_button", CinderscapesBlocks.SCORCHED_BUTTON);
         SCORCHED_DOOR = CinderscapesRegistry.registerBlockItem("scorched_door", CinderscapesBlocks.SCORCHED_DOOR);
 
-        SCORCHED_SIGN = CinderscapesRegistry.register("scorched_sign", settings -> new SignItem(CinderscapesBlocks.SCORCHED_SIGN, CinderscapesBlocks.SCORCHED_WALL_SIGN, settings), new Item.Settings().maxCount(16));
-        SCORCHED_HANGING_SIGN = CinderscapesRegistry.register("scorched_hanging_sign", settings -> new HangingSignItem(CinderscapesBlocks.SCORCHED_HANGING_SIGN, CinderscapesBlocks.SCORCHED_WALL_HANGING_SIGN, settings), new Item.Settings().maxCount(16));
+        SCORCHED_SIGN = CinderscapesRegistry.register("scorched_sign", settings -> new SignItem(CinderscapesBlocks.SCORCHED_SIGN, CinderscapesBlocks.SCORCHED_WALL_SIGN, settings), new Item.Settings().maxCount(16).useBlockPrefixedTranslationKey());
+        SCORCHED_HANGING_SIGN = CinderscapesRegistry.register("scorched_hanging_sign", settings -> new HangingSignItem(CinderscapesBlocks.SCORCHED_HANGING_SIGN, CinderscapesBlocks.SCORCHED_WALL_HANGING_SIGN, settings), new Item.Settings().maxCount(16).useBlockPrefixedTranslationKey());
 
         SCORCHED_SHRUB = CinderscapesRegistry.registerBlockItem("scorched_shrub", CinderscapesBlocks.SCORCHED_SHRUB);
         SCORCHED_SPROUTS = CinderscapesRegistry.registerBlockItem("scorched_sprouts", CinderscapesBlocks.SCORCHED_SPROUTS);
@@ -227,8 +227,8 @@ public class CinderscapesItems {
         UMBRAL_BUTTON = CinderscapesRegistry.registerBlockItem("umbral_button", CinderscapesBlocks.UMBRAL_BUTTON);
         UMBRAL_DOOR = CinderscapesRegistry.registerBlockItem("umbral_door", CinderscapesBlocks.UMBRAL_DOOR);
 
-        UMBRAL_SIGN = CinderscapesRegistry.register("umbral_sign", settings -> new SignItem(CinderscapesBlocks.UMBRAL_SIGN, CinderscapesBlocks.UMBRAL_WALL_SIGN, settings), new Item.Settings().maxCount(16));
-        UMBRAL_HANGING_SIGN = CinderscapesRegistry.register("umbral_hanging_sign", settings -> new HangingSignItem(CinderscapesBlocks.UMBRAL_HANGING_SIGN, CinderscapesBlocks.UMBRAL_WALL_HANGING_SIGN, settings), new Item.Settings().maxCount(16));
+        UMBRAL_SIGN = CinderscapesRegistry.register("umbral_sign", settings -> new SignItem(CinderscapesBlocks.UMBRAL_SIGN, CinderscapesBlocks.UMBRAL_WALL_SIGN, settings), new Item.Settings().maxCount(16).useBlockPrefixedTranslationKey());
+        UMBRAL_HANGING_SIGN = CinderscapesRegistry.register("umbral_hanging_sign", settings -> new HangingSignItem(CinderscapesBlocks.UMBRAL_HANGING_SIGN, CinderscapesBlocks.UMBRAL_WALL_HANGING_SIGN, settings), new Item.Settings().maxCount(16).useBlockPrefixedTranslationKey());
 
         // Other
 

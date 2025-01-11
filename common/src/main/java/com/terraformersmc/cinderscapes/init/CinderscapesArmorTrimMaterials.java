@@ -9,15 +9,19 @@ import net.minecraft.registry.RegistryKeys;
 import net.minecraft.text.Style;
 import net.minecraft.util.Identifier;
 
+import java.util.List;
+
 public class CinderscapesArmorTrimMaterials {
-    public static final RegistryKey<ArmorTrimMaterial> ROSE_QUARTZ = createRegistryKey("rose_quartz");
-    public static final RegistryKey<ArmorTrimMaterial> SMOKY_QUARTZ = createRegistryKey("smoky_quartz");
-    public static final RegistryKey<ArmorTrimMaterial> SULFUR_QUARTZ = createRegistryKey("sulfur_quartz");
+    public static final List<String> TRIM_MATERIALS = List.of("cinderscapes_rose_quartz", "cinderscapes_smoky_quartz", "cinderscapes_sulfur_quartz");
+
+    public static final RegistryKey<ArmorTrimMaterial> ROSE_QUARTZ = createRegistryKey("cinderscapes_rose_quartz");
+    public static final RegistryKey<ArmorTrimMaterial> SMOKY_QUARTZ = createRegistryKey("cinderscapes_smoky_quartz");
+    public static final RegistryKey<ArmorTrimMaterial> SULFUR_QUARTZ = createRegistryKey("cinderscapes_sulfur_quartz");
 
     public static void bootstrap(Registerable<ArmorTrimMaterial> registerable) {
-        ArmorTrimMaterials.register(registerable, ROSE_QUARTZ, CinderscapesItems.ROSE_QUARTZ, Style.EMPTY.withColor(0xE77391), 0.40666f);
-        ArmorTrimMaterials.register(registerable, SMOKY_QUARTZ, CinderscapesItems.SMOKY_QUARTZ, Style.EMPTY.withColor(0x5a4b46), 0.30666f);
-        ArmorTrimMaterials.register(registerable, SULFUR_QUARTZ, CinderscapesItems.SULFUR_QUARTZ, Style.EMPTY.withColor(0xbaa938), 0.60666f);
+        ArmorTrimMaterials.register(registerable, ROSE_QUARTZ, CinderscapesItems.ROSE_QUARTZ, Style.EMPTY.withColor(0xE77391));
+        ArmorTrimMaterials.register(registerable, SMOKY_QUARTZ, CinderscapesItems.SMOKY_QUARTZ, Style.EMPTY.withColor(0x5a4b46));
+        ArmorTrimMaterials.register(registerable, SULFUR_QUARTZ, CinderscapesItems.SULFUR_QUARTZ, Style.EMPTY.withColor(0xbaa938));
     }
 
     private static RegistryKey<ArmorTrimMaterial> createRegistryKey(String id) {

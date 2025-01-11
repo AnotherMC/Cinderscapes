@@ -258,4 +258,9 @@ public class CinderscapesBlockTagProvider extends FabricTagProvider.BlockTagProv
 				.add(CinderscapesBlocks.STRIPPED_UMBRAL_HYPHAE)
 				.add(CinderscapesBlocks.STRIPPED_UMBRAL_STEM);
 	}
+
+	@Override
+	public String getName() {
+		return "Cinderscapes Block Tags";
+	}
 }

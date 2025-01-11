@@ -3,7 +3,7 @@ plugins {
     id 'maven-publish'
     id 'idea'
     id 'eclipse'
-    id 'fabric-loom' version '1.7.+'
+    id 'fabric-loom' version '1.9.+'
 }
 
 apply from: 'https://raw.githubusercontent.com/TerraformersMC/GradleScripts/2.7/ferry.gradle'
@@ -23,6 +23,8 @@ dependencies {
     includeMod "terraform-api", "com.terraformersmc.terraform-api:terraform-wood-api-v1:${project.terraform_wood_api_version}"
 
     includeMod "cloth-config", "me.shedaniel.cloth:cloth-config-fabric:${project.clothconfig_version}"
+
+    includeMod "mixson", "com.github.ramixin:mixson:${project.mixson_version}"
 
     if (findProject(':cinderscapes-worldgen') != null) {
         includeMod "biolith", "com.terraformersmc:biolith-fabric:${biolith_version}"
@@ -95,7 +97,19 @@ allprojects {
 
         // Cloth Config
         maven {
-            url = "https://maven.shedaniel.me"
+            url = 'https://maven.shedaniel.me'
+        }
+
+        // for Mixson
+        exclusiveContent {
+            forRepository {
+                maven {
+                    url 'https://jitpack.io'
+                }
+            }
+            filter {
+                includeGroup "com.github.ramixin"
+            }
         }
     }
 }
@@ -115,6 +129,8 @@ subprojects {
         modImplementation "com.terraformersmc.terraform-api:terraform-wood-api-v1:${project.terraform_wood_api_version}"
 
         modImplementation "me.shedaniel.cloth:cloth-config-fabric:${project.clothconfig_version}"
+
+        modImplementation "com.github.ramixin:mixson:${project.mixson_version}"
     }
 
     version = rootProject.version

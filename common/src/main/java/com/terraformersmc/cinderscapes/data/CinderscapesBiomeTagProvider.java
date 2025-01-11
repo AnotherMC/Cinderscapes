@@ -58,4 +58,9 @@ public class CinderscapesBiomeTagProvider extends FabricTagProvider<Biome> {
 		getOrCreateTagBuilder(BiomeTags.RUINED_PORTAL_NETHER_HAS_STRUCTURE)
 				.addOptional(CinderscapesBiomes.ASHY_SHOALS);
 	}
+
+	@Override
+	public String getName() {
+		return "Cinderscapes Biome Tags";
+	}
 }

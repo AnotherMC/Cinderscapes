@@ -43,7 +43,7 @@ public class CinderscapesDynamicRegistryProvider extends FabricDynamicRegistryPr
 
 	@Override
 	public String getName() {
-		return "Cinderscapes";
+		return "Cinderscapes Dynamic Registries";
 	}
 
 	/**

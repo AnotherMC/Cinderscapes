@@ -1,8 +1,0 @@
-{
-  "parent": "minecraft:block/inner_stairs",
-  "textures": {
-    "bottom": "cinderscapes:block/umbral_planks",
-    "top": "cinderscapes:block/umbral_planks",
-    "side": "cinderscapes:block/umbral_planks"
-  }
-}

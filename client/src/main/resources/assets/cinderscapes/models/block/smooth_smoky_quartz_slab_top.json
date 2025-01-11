@@ -1,8 +1,0 @@
-{
-  "parent": "minecraft:block/slab_top",
-  "textures": {
-    "bottom": "cinderscapes:block/smooth_smoky_quartz",
-    "top": "cinderscapes:block/smooth_smoky_quartz",
-    "side": "cinderscapes:block/smooth_smoky_quartz"
-  }
-}

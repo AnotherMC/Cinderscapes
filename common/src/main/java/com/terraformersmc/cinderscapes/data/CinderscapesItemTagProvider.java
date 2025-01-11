@@ -193,4 +193,9 @@ public class CinderscapesItemTagProvider extends FabricTagProvider.ItemTagProvid
 		getOrCreateTagBuilder(CinderscapesItemTags.SULFUR_ORES)
 				.add(CinderscapesBlocks.SULFUR_ORE.asItem());
 	}
+
+	@Override
+	public String getName() {
+		return "Cinderscapes Item Tags";
+	}
 }

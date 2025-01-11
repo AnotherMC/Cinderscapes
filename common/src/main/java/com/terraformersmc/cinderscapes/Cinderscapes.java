@@ -30,6 +30,7 @@ public class Cinderscapes implements ModInitializer {
 		CinderscapesSoundEvents.init();
 		CinderscapesTrades.init();
 		CinderscapesItemGroups.init();
+		CinderscapesRegistryAliases.init();
 
 		if (!FabricLoader.getInstance().isModLoaded("cinderscapes-worldgen")) {
 			Cinderscapes.LOGGER.info("No Cinderscapes worldgen module present; Cinderscapes biomes will not generate.");

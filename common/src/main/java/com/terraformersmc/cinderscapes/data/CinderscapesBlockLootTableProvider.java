@@ -53,8 +53,6 @@ public class CinderscapesBlockLootTableProvider extends FabricBlockLootTableProv
 		addDrop(CinderscapesBlocks.ROSE_QUARTZ_BRICKS);
 		addDrop(CinderscapesBlocks.ROSE_QUARTZ_ORE, block -> oreDrops(block, CinderscapesItems.ROSE_QUARTZ));
 		addDrop(CinderscapesBlocks.ROSE_QUARTZ_PILLAR);
-		addDrop(CinderscapesBlocks.ROSE_QUARTZ_SLAB, this::slabDrops);
-		addDrop(CinderscapesBlocks.ROSE_QUARTZ_STAIRS);
 		addDrop(CinderscapesBlocks.SCORCHED_TENDRILS);
 		addDrop(CinderscapesBlocks.SMOKY_QUARTZ_BLOCK);
 		addDrop(CinderscapesBlocks.SMOKY_QUARTZ_BRICKS);

@@ -144,8 +144,7 @@ public class CinderscapesRecipeProvider extends FabricRecipeProvider {
 						.offerTo(exporter);
 				offerStonecuttingRecipe(RecipeCategory.BUILDING_BLOCKS, CinderscapesBlocks.SMOKY_QUARTZ_PILLAR, CinderscapesBlocks.SMOKY_QUARTZ_BLOCK);
                 offerSmelting(List.of(CinderscapesBlocks.SMOKY_QUARTZ_BLOCK), RecipeCategory.BUILDING_BLOCKS, CinderscapesBlocks.SMOOTH_SMOKY_QUARTZ, 0.1f, 200, "building_blocks");
-                offerStonecuttingRecipe(exporter, RecipeCategory.BUILDING_BLOCKS, CinderscapesBlocks.CHISELED_SULFUR_QUARTZ_BLOCK, CinderscapesBlocks.SULFUR_QUARTZ_BLOCK);
-				offerStonecuttingRecipe(RecipeCategory.BUILDING_BLOCKS, CinderscapesBlocks.CHISELED_SULFUR_QUARTZ_BLOCK, CinderscapesBlocks.SULFUR_QUARTZ_BLOCK);
+                offerStonecuttingRecipe(RecipeCategory.BUILDING_BLOCKS, CinderscapesBlocks.CHISELED_SULFUR_QUARTZ_BLOCK, CinderscapesBlocks.SULFUR_QUARTZ_BLOCK);
 				offerSmelting(List.of(CinderscapesBlocks.SULFUR_QUARTZ_ORE), RecipeCategory.MISC, CinderscapesItems.SULFUR_QUARTZ, 0.2f, 200, "misc");
 				createShaped(RecipeCategory.BUILDING_BLOCKS, CinderscapesBlocks.SULFUR_QUARTZ_BLOCK, 1)
 						.pattern("qq")
@@ -166,19 +165,19 @@ public class CinderscapesRecipeProvider extends FabricRecipeProvider {
 				offerSmelting(List.of(CinderscapesBlocks.SULFUR_QUARTZ_BLOCK), RecipeCategory.BUILDING_BLOCKS, CinderscapesBlocks.SMOOTH_SULFUR_QUARTZ, 0.1f, 200, "building_blocks");
 
 				// wood recipes
-				generateFamily(CinderscapesBlockFamilies.SCORCHED, enabledFeatures);
-				offerPlanksRecipe(CinderscapesBlocks.SCORCHED_PLANKS, CinderscapesItemTags.SCORCHED_STEMS, 4);
+				//generateFamily(CinderscapesBlockFamilies.SCORCHED, enabledFeatures);
 				offerBarkBlockRecipe(CinderscapesBlocks.SCORCHED_HYPHAE, CinderscapesBlocks.SCORCHED_STEM);
 				offerBarkBlockRecipe(CinderscapesBlocks.STRIPPED_SCORCHED_HYPHAE, CinderscapesBlocks.STRIPPED_SCORCHED_STEM);
 				// (no scorched boat at this time)
-				offerHangingSignRecipe(CinderscapesItems.SCORCHED_HANGING_SIGN, CinderscapesBlocks.STRIPPED_SCORCHED_STEM);
 
-				generateFamily(CinderscapesBlockFamilies.UMBRAL, enabledFeatures);
-				offerPlanksRecipe(CinderscapesBlocks.UMBRAL_PLANKS, CinderscapesItemTags.UMBRAL_STEMS, 4);
-				offerBarkBlockRecipe(CinderscapesBlocks.UMBRAL_HYPHAE, CinderscapesBlocks.UMBRAL_STEM);
+				//generateFamily(CinderscapesBlockFamilies.UMBRAL, enabledFeatures);
+				createShapeless(RecipeCategory.BUILDING_BLOCKS, Items.WARPED_PLANKS, 4)
+						.input(CinderscapesItemTags.UMBRAL_STEMS)
+						.group("planks")
+						.criterion("has_logs", conditionsFromTag(CinderscapesItemTags.UMBRAL_STEMS))
+						.offerTo(exporter, "cinderscapes:umbral_planks");				offerBarkBlockRecipe(CinderscapesBlocks.UMBRAL_HYPHAE, CinderscapesBlocks.UMBRAL_STEM);
 				offerBarkBlockRecipe(CinderscapesBlocks.STRIPPED_UMBRAL_HYPHAE, CinderscapesBlocks.STRIPPED_UMBRAL_STEM);
 				// (no umbral boat at this time)
-				offerHangingSignRecipe(CinderscapesItems.UMBRAL_HANGING_SIGN, CinderscapesBlocks.STRIPPED_UMBRAL_STEM);
 			}
 		};
 	}

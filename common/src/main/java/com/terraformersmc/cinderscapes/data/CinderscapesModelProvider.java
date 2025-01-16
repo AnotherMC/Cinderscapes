@@ -44,15 +44,11 @@ public class CinderscapesModelProvider extends FabricModelProvider {
         /////////////////
 
         // Scorched wood set
-        generator.registerCubeAllModelTexturePool(CinderscapesBlockFamilies.SCORCHED.getBaseBlock()).family(CinderscapesBlockFamilies.SCORCHED);
+        //generator.registerCubeAllModelTexturePool(CinderscapesBlockFamilies.SCORCHED.getBaseBlock()).family(CinderscapesBlockFamilies.SCORCHED);
         generator.registerLog(CinderscapesBlocks.SCORCHED_STEM).log(CinderscapesBlocks.SCORCHED_STEM).wood(CinderscapesBlocks.SCORCHED_HYPHAE);
         generator.registerLog(CinderscapesBlocks.STRIPPED_SCORCHED_STEM).log(CinderscapesBlocks.STRIPPED_SCORCHED_STEM).wood(CinderscapesBlocks.STRIPPED_SCORCHED_HYPHAE);
-        generator.registerHangingSign(CinderscapesBlockFamilies.SCORCHED.getBaseBlock(), CinderscapesBlocks.SCORCHED_HANGING_SIGN, CinderscapesBlocks.SCORCHED_WALL_HANGING_SIGN);
         // Item models missed by vanilla code
-        this.registerBlockItemModel(generator, CinderscapesBlocks.SCORCHED_FENCE_GATE);
         this.registerBlockItemModel(generator, CinderscapesBlocks.SCORCHED_STEM);
-        this.registerBlockItemModel(generator, CinderscapesBlocks.SCORCHED_PLANKS);
-        this.registerBlockItemModel(generator, CinderscapesBlocks.SCORCHED_PRESSURE_PLATE);
         this.registerBlockItemModel(generator, CinderscapesBlocks.SCORCHED_HYPHAE);
         this.registerBlockItemModel(generator, CinderscapesBlocks.STRIPPED_SCORCHED_STEM);
         this.registerBlockItemModel(generator, CinderscapesBlocks.STRIPPED_SCORCHED_HYPHAE);
@@ -68,7 +64,7 @@ public class CinderscapesModelProvider extends FabricModelProvider {
         // We have to make models inheriting from vanilla's hand-rolled snow models...
         TextureMap ashTexture = TextureMap.all(CinderscapesBlocks.ASH);
         Identifier ashModelId = Models.CUBE_ALL.upload(CinderscapesBlocks.ASH_BLOCK, ashTexture, generator.modelCollector);
-        generator.blockStateCollector.accept(VariantsBlockStateSupplier.create(CinderscapesBlocks.ASH).coordinate(
+        /*generator.blockStateCollector.accept(VariantsBlockStateSupplier.create(CinderscapesBlocks.ASH).coordinate(
                 BlockStateVariantMap.create(Properties.LAYERS).register(height -> BlockStateVariant.create()
                         .put(VariantSettings.MODEL,
                                 height < 8 ?
@@ -76,7 +72,7 @@ public class CinderscapesModelProvider extends FabricModelProvider {
                                         Optional.empty(), TextureKey.PARTICLE, TextureKey.TEXTURE)
                                         .upload(ModelIds.getBlockSubModelId(CinderscapesBlocks.ASH, "_height" + height * 2),
                                                 ashTexture, generator.modelCollector) :
-                                ashModelId))));
+                                ashModelId))));*/
         generator.registerParentedItemModel(CinderscapesBlocks.ASH, ModelIds.getBlockSubModelId(CinderscapesBlocks.ASH, "_height2"));
         generator.blockStateCollector.accept(BlockStateModelGenerator.createSingletonBlockState(CinderscapesBlocks.ASH_BLOCK, ashModelId));
         this.registerBlockItemModel(generator, CinderscapesBlocks.ASH_BLOCK);
@@ -87,16 +83,12 @@ public class CinderscapesModelProvider extends FabricModelProvider {
         ////////////////////
 
         // Umbral wood set
-        generator.registerCubeAllModelTexturePool(CinderscapesBlockFamilies.UMBRAL.getBaseBlock()).family(CinderscapesBlockFamilies.UMBRAL);
+        //generator.registerCubeAllModelTexturePool(CinderscapesBlockFamilies.UMBRAL.getBaseBlock()).family(CinderscapesBlockFamilies.UMBRAL);
         generator.registerLog(CinderscapesBlocks.UMBRAL_STEM).log(CinderscapesBlocks.UMBRAL_STEM).wood(CinderscapesBlocks.UMBRAL_HYPHAE);
         generator.registerLog(CinderscapesBlocks.STRIPPED_UMBRAL_STEM).log(CinderscapesBlocks.STRIPPED_UMBRAL_STEM).wood(CinderscapesBlocks.STRIPPED_UMBRAL_HYPHAE);
-        generator.registerHangingSign(CinderscapesBlockFamilies.UMBRAL.getBaseBlock(), CinderscapesBlocks.UMBRAL_HANGING_SIGN, CinderscapesBlocks.UMBRAL_WALL_HANGING_SIGN);
         generator.registerFlowerPotPlantAndItem(CinderscapesBlocks.UMBRAL_FUNGUS, CinderscapesBlocks.POTTED_UMBRAL_FUNGUS, BlockStateModelGenerator.CrossType.NOT_TINTED);
         // Item models missed by vanilla code
-        this.registerBlockItemModel(generator, CinderscapesBlocks.UMBRAL_FENCE_GATE);
         this.registerBlockItemModel(generator, CinderscapesBlocks.UMBRAL_STEM);
-        this.registerBlockItemModel(generator, CinderscapesBlocks.UMBRAL_PLANKS);
-        this.registerBlockItemModel(generator, CinderscapesBlocks.UMBRAL_PRESSURE_PLATE);
         this.registerBlockItemModel(generator, CinderscapesBlocks.UMBRAL_HYPHAE);
         this.registerBlockItemModel(generator, CinderscapesBlocks.STRIPPED_UMBRAL_STEM);
         this.registerBlockItemModel(generator, CinderscapesBlocks.STRIPPED_UMBRAL_HYPHAE);
@@ -160,8 +152,6 @@ public class CinderscapesModelProvider extends FabricModelProvider {
         this.registerBlockItemModel(generator, CinderscapesBlocks.ROSE_QUARTZ_PILLAR);
         generator.registerSimpleCubeAll(CinderscapesBlocks.CRYSTALLINE_ROSE_QUARTZ);
         this.registerBlockItemModel(generator, CinderscapesBlocks.CRYSTALLINE_ROSE_QUARTZ);
-        this.registerPolyp(generator, CinderscapesBlocks.POLYPITE_ROSE_QUARTZ);
-        this.registerPottedPlantOnly(generator, CinderscapesBlocks.POLYPITE_ROSE_QUARTZ, CinderscapesBlocks.POTTED_POLYPITE_ROSE_QUARTZ);
 
         // Smoky Quartz set
         generator.registerCubeAllModelTexturePool(CinderscapesBlockFamilies.SMOKY_QUARTZ_BLOCK.getBaseBlock()).family(CinderscapesBlockFamilies.SMOKY_QUARTZ_BLOCK);
@@ -178,8 +168,6 @@ public class CinderscapesModelProvider extends FabricModelProvider {
         this.registerBlockItemModel(generator, CinderscapesBlocks.SMOKY_QUARTZ_PILLAR);
         generator.registerSimpleCubeAll(CinderscapesBlocks.CRYSTALLINE_SMOKY_QUARTZ);
         this.registerBlockItemModel(generator, CinderscapesBlocks.CRYSTALLINE_SMOKY_QUARTZ);
-        this.registerPolyp(generator, CinderscapesBlocks.POLYPITE_SMOKY_QUARTZ);
-        this.registerPottedPlantOnly(generator, CinderscapesBlocks.POLYPITE_SMOKY_QUARTZ, CinderscapesBlocks.POTTED_POLYPITE_SMOKY_QUARTZ);
 
         // Sulfur Quartz set
         generator.registerCubeAllModelTexturePool(CinderscapesBlockFamilies.SULFUR_QUARTZ_BLOCK.getBaseBlock()).family(CinderscapesBlockFamilies.SULFUR_QUARTZ_BLOCK);
@@ -196,14 +184,10 @@ public class CinderscapesModelProvider extends FabricModelProvider {
         this.registerBlockItemModel(generator, CinderscapesBlocks.SULFUR_QUARTZ_PILLAR);
         generator.registerSimpleCubeAll(CinderscapesBlocks.CRYSTALLINE_SULFUR_QUARTZ);
         this.registerBlockItemModel(generator, CinderscapesBlocks.CRYSTALLINE_SULFUR_QUARTZ);
-        this.registerPolyp(generator, CinderscapesBlocks.POLYPITE_SULFUR_QUARTZ);
-        this.registerPottedPlantOnly(generator, CinderscapesBlocks.POLYPITE_SULFUR_QUARTZ, CinderscapesBlocks.POTTED_POLYPITE_SULFUR_QUARTZ);
 
         // Nether Quartz additions
         generator.registerSimpleCubeAll(CinderscapesBlocks.CRYSTALLINE_QUARTZ);
         this.registerBlockItemModel(generator, CinderscapesBlocks.CRYSTALLINE_QUARTZ);
-        this.registerPolyp(generator, CinderscapesBlocks.POLYPITE_QUARTZ);
-        this.registerPottedPlantOnly(generator, CinderscapesBlocks.POLYPITE_QUARTZ, CinderscapesBlocks.POTTED_POLYPITE_QUARTZ);
 
         // Quartz Cavern misc.
         generator.registerFlowerPotPlant(CinderscapesBlocks.CRYSTINIUM, CinderscapesBlocks.POTTED_CRYSTINIUM, BlockStateModelGenerator.CrossType.NOT_TINTED);

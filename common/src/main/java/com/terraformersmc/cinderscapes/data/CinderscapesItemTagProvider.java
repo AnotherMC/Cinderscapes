@@ -6,6 +6,7 @@ import com.terraformersmc.cinderscapes.tag.CinderscapesBlockTags;
 import com.terraformersmc.cinderscapes.tag.CinderscapesItemTags;
 import net.fabricmc.fabric.api.datagen.v1.FabricDataOutput;
 import net.fabricmc.fabric.api.datagen.v1.provider.FabricTagProvider;
+import net.fabricmc.fabric.api.tag.convention.v2.ConventionalBlockTags;
 import net.fabricmc.fabric.api.tag.convention.v2.ConventionalItemTags;
 import net.minecraft.item.Items;
 import net.minecraft.registry.RegistryWrapper;
@@ -21,9 +22,11 @@ public class CinderscapesItemTagProvider extends FabricTagProvider.ItemTagProvid
 
 	@Override
 	public void configure(RegistryWrapper.WrapperLookup registries) {
-		// basic block tags
+		/*
+		 * Vanilla item tags
+		 */
 		getOrCreateTagBuilder(ItemTags.FOX_FOOD)
-			.add(CinderscapesItems.BRAMBLE_BERRIES);
+				.add(CinderscapesItems.BRAMBLE_BERRIES);
 
 		copy(BlockTags.LOGS, ItemTags.LOGS);
 
@@ -50,9 +53,9 @@ public class CinderscapesItemTagProvider extends FabricTagProvider.ItemTagProvid
 		copy(BlockTags.STAIRS, ItemTags.STAIRS);
 
 		getOrCreateTagBuilder(ItemTags.TRIM_MATERIALS)
-			.add(CinderscapesItems.ROSE_QUARTZ)
-			.add(CinderscapesItems.SMOKY_QUARTZ)
-			.add(CinderscapesItems.SULFUR_QUARTZ);
+				.add(CinderscapesItems.ROSE_QUARTZ)
+				.add(CinderscapesItems.SMOKY_QUARTZ)
+				.add(CinderscapesItems.SULFUR_QUARTZ);
 
 		copy(BlockTags.WART_BLOCKS, ItemTags.WART_BLOCKS);
 
@@ -71,92 +74,102 @@ public class CinderscapesItemTagProvider extends FabricTagProvider.ItemTagProvid
 		copy(BlockTags.WOODEN_TRAPDOORS, ItemTags.WOODEN_TRAPDOORS);
 
 
-		// conventional tags
-		getOrCreateTagBuilder(ConventionalItemTags.BERRIES_FOODS)
-			.add(CinderscapesItems.BRAMBLE_BERRIES);
+		/*
+		 * Conventional item tags
+		 */
+		getOrCreateTagBuilder(ConventionalItemTags.BERRY_FOODS)
+				.add(CinderscapesItems.BRAMBLE_BERRIES);
 
 		getOrCreateTagBuilder(CinderscapesItemTags.DARK_ASHES_DUSTS)
-			.add(CinderscapesItems.ASH_PILE);
+				.add(CinderscapesItems.ASH_PILE);
 
 		getOrCreateTagBuilder(ConventionalItemTags.DUSTS)
-			.add(CinderscapesItems.ASH_PILE);
+				.add(CinderscapesItems.ASH_PILE);
 
 		getOrCreateTagBuilder(ConventionalItemTags.FOODS)
-			.add(CinderscapesItems.BRAMBLE_BERRIES);
+				.add(CinderscapesItems.BRAMBLE_BERRIES);
 
 		getOrCreateTagBuilder(ConventionalItemTags.QUARTZ_GEMS)
-			.add(Items.QUARTZ)
-			.add(CinderscapesItems.ROSE_QUARTZ)
-			.add(CinderscapesItems.SMOKY_QUARTZ)
-			.add(CinderscapesItems.SULFUR_QUARTZ);
+				.add(Items.QUARTZ)
+				.add(CinderscapesItems.ROSE_QUARTZ)
+				.add(CinderscapesItems.SMOKY_QUARTZ)
+				.add(CinderscapesItems.SULFUR_QUARTZ);
 
 		getOrCreateTagBuilder(CinderscapesItemTags.QUARTZ_BLOCKS)
-			.add(CinderscapesBlocks.CHISELED_ROSE_QUARTZ_BLOCK.asItem())
-			.add(CinderscapesBlocks.CHISELED_SMOKY_QUARTZ_BLOCK.asItem())
-			.add(CinderscapesBlocks.CHISELED_SULFUR_QUARTZ_BLOCK.asItem())
-			.add(CinderscapesBlocks.ROSE_QUARTZ_BLOCK.asItem())
-			.add(CinderscapesBlocks.ROSE_QUARTZ_BRICKS.asItem())
-			.add(CinderscapesBlocks.ROSE_QUARTZ_PILLAR.asItem())
-			.add(CinderscapesBlocks.SMOKY_QUARTZ_BLOCK.asItem())
-			.add(CinderscapesBlocks.SMOKY_QUARTZ_BRICKS.asItem())
-			.add(CinderscapesBlocks.SMOKY_QUARTZ_PILLAR.asItem())
-			.add(CinderscapesBlocks.SMOOTH_ROSE_QUARTZ.asItem())
-			.add(CinderscapesBlocks.SMOOTH_SMOKY_QUARTZ.asItem())
-			.add(CinderscapesBlocks.SMOOTH_SULFUR_QUARTZ.asItem())
-			.add(CinderscapesBlocks.SULFUR_QUARTZ_BLOCK.asItem())
-			.add(CinderscapesBlocks.SULFUR_QUARTZ_BRICKS.asItem())
-			.add(CinderscapesBlocks.SULFUR_QUARTZ_PILLAR.asItem());
+				.add(CinderscapesBlocks.CHISELED_ROSE_QUARTZ_BLOCK.asItem())
+				.add(CinderscapesBlocks.CHISELED_SMOKY_QUARTZ_BLOCK.asItem())
+				.add(CinderscapesBlocks.CHISELED_SULFUR_QUARTZ_BLOCK.asItem())
+				.add(CinderscapesBlocks.ROSE_QUARTZ_BLOCK.asItem())
+				.add(CinderscapesBlocks.ROSE_QUARTZ_BRICKS.asItem())
+				.add(CinderscapesBlocks.ROSE_QUARTZ_PILLAR.asItem())
+				.add(CinderscapesBlocks.SMOKY_QUARTZ_BLOCK.asItem())
+				.add(CinderscapesBlocks.SMOKY_QUARTZ_BRICKS.asItem())
+				.add(CinderscapesBlocks.SMOKY_QUARTZ_PILLAR.asItem())
+				.add(CinderscapesBlocks.SMOOTH_ROSE_QUARTZ.asItem())
+				.add(CinderscapesBlocks.SMOOTH_SMOKY_QUARTZ.asItem())
+				.add(CinderscapesBlocks.SMOOTH_SULFUR_QUARTZ.asItem())
+				.add(CinderscapesBlocks.SULFUR_QUARTZ_BLOCK.asItem())
+				.add(CinderscapesBlocks.SULFUR_QUARTZ_BRICKS.asItem())
+				.add(CinderscapesBlocks.SULFUR_QUARTZ_PILLAR.asItem());
 
 		getOrCreateTagBuilder(ConventionalItemTags.QUARTZ_ORES)
-			.add(CinderscapesBlocks.ROSE_QUARTZ_ORE.asItem())
-			.add(CinderscapesBlocks.SMOKY_QUARTZ_ORE.asItem())
-			.add(CinderscapesBlocks.SULFUR_QUARTZ_ORE.asItem());
+				.add(CinderscapesBlocks.ROSE_QUARTZ_ORE.asItem())
+				.add(CinderscapesBlocks.SMOKY_QUARTZ_ORE.asItem())
+				.add(CinderscapesBlocks.SULFUR_QUARTZ_ORE.asItem());
 
 		getOrCreateTagBuilder(ConventionalItemTags.STORAGE_BLOCKS)
-			.add(CinderscapesBlocks.SULFUR_BLOCK.asItem());
+				.add(CinderscapesBlocks.SULFUR_BLOCK.asItem());
 
 		getOrCreateTagBuilder(CinderscapesItemTags.STORAGE_BLOCKS_SULFUR)
-			.add(CinderscapesBlocks.SULFUR_BLOCK.asItem());
+				.add(CinderscapesBlocks.SULFUR_BLOCK.asItem());
 
-		copy(CinderscapesBlockTags.STRIPPED_LOGS, CinderscapesItemTags.STRIPPED_LOGS);
+		copy(ConventionalBlockTags.STRIPPED_LOGS, ConventionalItemTags.STRIPPED_LOGS);
 
-		copy(CinderscapesBlockTags.STRIPPED_WOOD, CinderscapesItemTags.STRIPPED_WOOD);
+		copy(ConventionalBlockTags.STRIPPED_WOODS, ConventionalItemTags.STRIPPED_WOODS);
 
 		getOrCreateTagBuilder(CinderscapesItemTags.SULFURS_ORES)
-			.add(CinderscapesBlocks.SULFUR_ORE.asItem());
+				.add(CinderscapesBlocks.SULFUR_ORE.asItem());
 
 		getOrCreateTagBuilder(CinderscapesItemTags.SULFURS)
-			.add(CinderscapesItems.SULFUR);
+				.add(CinderscapesItems.SULFUR);
 
 
-		// local item tags
+		/*
+		 * Local item tags
+		 */
 		getOrCreateTagBuilder(CinderscapesItemTags.ROSE_QUARTZ_CONVERTIBLES)
-			.add(CinderscapesBlocks.CHISELED_ROSE_QUARTZ_BLOCK.asItem())
-			.add(CinderscapesBlocks.ROSE_QUARTZ_BLOCK.asItem())
-			.add(CinderscapesBlocks.ROSE_QUARTZ_PILLAR.asItem());
+				.add(CinderscapesBlocks.CHISELED_ROSE_QUARTZ_BLOCK.asItem())
+				.add(CinderscapesBlocks.ROSE_QUARTZ_BLOCK.asItem())
+				.add(CinderscapesBlocks.ROSE_QUARTZ_PILLAR.asItem());
 
 		copy(CinderscapesBlockTags.SCORCHED_STEMS, CinderscapesItemTags.SCORCHED_STEMS);
 
 		getOrCreateTagBuilder(CinderscapesItemTags.SMOKY_QUARTZ_CONVERTIBLES)
-			.add(CinderscapesBlocks.CHISELED_SMOKY_QUARTZ_BLOCK.asItem())
-			.add(CinderscapesBlocks.SMOKY_QUARTZ_BLOCK.asItem())
-			.add(CinderscapesBlocks.SMOKY_QUARTZ_PILLAR.asItem());
+				.add(CinderscapesBlocks.CHISELED_SMOKY_QUARTZ_BLOCK.asItem())
+				.add(CinderscapesBlocks.SMOKY_QUARTZ_BLOCK.asItem())
+				.add(CinderscapesBlocks.SMOKY_QUARTZ_PILLAR.asItem());
 
 		getOrCreateTagBuilder(CinderscapesItemTags.SULFUR_QUARTZ_CONVERTIBLES)
-			.add(CinderscapesBlocks.CHISELED_SULFUR_QUARTZ_BLOCK.asItem())
-			.add(CinderscapesBlocks.SULFUR_QUARTZ_BLOCK.asItem())
-			.add(CinderscapesBlocks.SULFUR_QUARTZ_PILLAR.asItem());
+				.add(CinderscapesBlocks.CHISELED_SULFUR_QUARTZ_BLOCK.asItem())
+				.add(CinderscapesBlocks.SULFUR_QUARTZ_BLOCK.asItem())
+				.add(CinderscapesBlocks.SULFUR_QUARTZ_PILLAR.asItem());
 
 		copy(CinderscapesBlockTags.UMBRAL_STEMS, CinderscapesItemTags.UMBRAL_STEMS);
 
 
 		// TODO: DEPRECATED as of 1.21
 		getOrCreateTagBuilder(CinderscapesItemTags.QUARTZ)
-			.add(Items.QUARTZ)
-			.add(CinderscapesItems.ROSE_QUARTZ)
-			.add(CinderscapesItems.SMOKY_QUARTZ)
-			.add(CinderscapesItems.SULFUR_QUARTZ);
+				.add(Items.QUARTZ)
+				.add(CinderscapesItems.ROSE_QUARTZ)
+				.add(CinderscapesItems.SMOKY_QUARTZ)
+				.add(CinderscapesItems.SULFUR_QUARTZ);
+
 		getOrCreateTagBuilder(CinderscapesItemTags.SULFUR_ORES)
-			.add(CinderscapesBlocks.SULFUR_ORE.asItem());
+				.add(CinderscapesBlocks.SULFUR_ORE.asItem());
+	}
+
+	@Override
+	public String getName() {
+		return "Cinderscapes Item Tags";
 	}
 }

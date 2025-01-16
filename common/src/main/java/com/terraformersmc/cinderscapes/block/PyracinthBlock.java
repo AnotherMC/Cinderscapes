@@ -3,8 +3,9 @@ package com.terraformersmc.cinderscapes.block;
 import com.terraformersmc.cinderscapes.util.StateShapeRegistry;
 import net.fabricmc.api.EnvType;
 import net.fabricmc.api.Environment;
-import net.fabricmc.fabric.api.object.builder.v1.block.FabricBlockSettings;
-import net.minecraft.block.*;
+import net.minecraft.block.Block;
+import net.minecraft.block.BlockState;
+import net.minecraft.block.ShapeContext;
 import net.minecraft.particle.ParticleTypes;
 import net.minecraft.util.math.BlockPos;
 import net.minecraft.util.math.Vec3d;
@@ -14,8 +15,8 @@ import net.minecraft.world.BlockView;
 import net.minecraft.world.World;
 
 public class PyracinthBlock extends CinderscapesNetherPlantBlock {
-    public PyracinthBlock() {
-        super(FabricBlockSettings.copyOf(Blocks.WARPED_ROOTS).mapColor(MapColor.ORANGE));
+    public PyracinthBlock(Settings settings) {
+        super(settings);
 
         StateShapeRegistry.put(this, (state) -> Block.createCuboidShape(5.0, 0.0, 5.0, 11.0, 16.0, 11.0));
     }
@@ -35,7 +36,7 @@ public class PyracinthBlock extends CinderscapesNetherPlantBlock {
 
     @Override
     public VoxelShape getOutlineShape(BlockState state, BlockView world, BlockPos pos, ShapeContext context) {
-        Vec3d modelOffset = state.getModelOffset(world, pos);
+        Vec3d modelOffset = state.getModelOffset(pos);
         return super.getOutlineShape(state, world, pos, context).offset(modelOffset.x, modelOffset.y, modelOffset.z);
     }
 }

@@ -1,7 +1,0 @@
-{
-  "parent": "minecraft:block/door_top_right",
-  "textures": {
-    "top": "cinderscapes:block/umbral_door_top",
-    "bottom": "cinderscapes:block/umbral_door_bottom"
-  }
-}

@@ -1,6 +1,5 @@
 {
 	"music_disc.chilling_in_hell": {
-		"category": "music",
 		"sounds": [
 			{
 				"name": "cinderscapes:music/chilling_in_hell",
@@ -9,7 +8,6 @@
 		]
 	},
 	"music_disc.luminous_plantation": {
-		"category": "music",
 		"sounds": [
 			{
 				"name": "cinderscapes:music/luminous_plantation",
@@ -18,7 +16,6 @@
 		]
 	},
 	"music.nether.ashy_shoals": {
-		"category": "music",
 		"sounds": [
 			{
 				"name": "cinderscapes:music/chilling_in_hell",
@@ -31,25 +28,24 @@
 				"weight": 3
 			},
 			{
-				"name": "music/game/nether/nether1",
+				"name": "music/game/nether/ballad_of_the_cats",
 				"stream": true
 			},
 			{
-				"name": "music/game/nether/nether2",
+				"name": "music/game/nether/concrete_halls",
 				"stream": true
 			},
 			{
-				"name": "music/game/nether/nether3",
+				"name": "music/game/nether/dead_voxel",
 				"stream": true
 			},
 			{
-				"name": "music/game/nether/nether4",
+				"name": "music/game/nether/warmth",
 				"stream": true
 			}
 		]
 	},
 	"music.nether.blackstone_shales": {
-		"category": "music",
 		"sounds": [
 			{
 				"name": "music/game/nether/soulsand_valley/so_below",
@@ -62,25 +58,24 @@
 				"weight": 3
 			},
 			{
-				"name": "music/game/nether/nether1",
+				"name": "music/game/nether/ballad_of_the_cats",
 				"stream": true
 			},
 			{
-				"name": "music/game/nether/nether2",
+				"name": "music/game/nether/concrete_halls",
 				"stream": true
 			},
 			{
-				"name": "music/game/nether/nether3",
+				"name": "music/game/nether/dead_voxel",
 				"stream": true
 			},
 			{
-				"name": "music/game/nether/nether4",
+				"name": "music/game/nether/warmth",
 				"stream": true
 			}
 		]
 	},
 	"music.nether.luminous_grove": {
-		"category": "music",
 		"sounds": [
 			{
 				"name": "cinderscapes:music/luminous_plantation",
@@ -93,25 +88,24 @@
 				"weight": 3
 			},
 			{
-				"name": "music/game/nether/nether1",
+				"name": "music/game/nether/ballad_of_the_cats",
 				"stream": true
 			},
 			{
-				"name": "music/game/nether/nether2",
+				"name": "music/game/nether/concrete_halls",
 				"stream": true
 			},
 			{
-				"name": "music/game/nether/nether3",
+				"name": "music/game/nether/dead_voxel",
 				"stream": true
 			},
 			{
-				"name": "music/game/nether/nether4",
+				"name": "music/game/nether/warmth",
 				"stream": true
 			}
 		]
 	},
 	"music.nether.quartz_cavern": {
-		"category": "music",
 		"sounds": [
 			{
 				"name": "music/game/nether/nether_wastes/rubedo",
@@ -124,25 +118,24 @@
 				"weight": 3
 			},
 			{
-				"name": "music/game/nether/nether1",
+				"name": "music/game/nether/ballad_of_the_cats",
 				"stream": true
 			},
 			{
-				"name": "music/game/nether/nether2",
+				"name": "music/game/nether/concrete_halls",
 				"stream": true
 			},
 			{
-				"name": "music/game/nether/nether3",
+				"name": "music/game/nether/dead_voxel",
 				"stream": true
 			},
 			{
-				"name": "music/game/nether/nether4",
+				"name": "music/game/nether/warmth",
 				"stream": true
 			}
 		]
 	},
 	"music.menu": {
-		"category": "music",
 		"sounds": [
 			{
 				"name": "cinderscapes:music/ruins",

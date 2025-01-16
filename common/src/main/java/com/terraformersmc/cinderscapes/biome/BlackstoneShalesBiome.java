@@ -56,7 +56,7 @@ public class BlackstoneShalesBiome {
         GenerationSettings.LookupBackedBuilder builder = new GenerationSettings.LookupBackedBuilder(placedFeatures, configuredCarvers);
 
         // DEFAULT MINECRAFT FEATURES
-        builder.carver(GenerationStep.Carver.AIR, ConfiguredCarvers.NETHER_CAVE);
+        builder.carver(ConfiguredCarvers.NETHER_CAVE);
         builder.feature(GenerationStep.Feature.UNDERGROUND_DECORATION, NetherPlacedFeatures.SPRING_DELTA);
         builder.feature(GenerationStep.Feature.UNDERGROUND_DECORATION, NetherPlacedFeatures.PATCH_FIRE);
         builder.feature(GenerationStep.Feature.UNDERGROUND_DECORATION, NetherPlacedFeatures.PATCH_SOUL_FIRE);

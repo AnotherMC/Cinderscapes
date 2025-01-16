@@ -1,8 +1,0 @@
-{
-  "parent": "minecraft:block/slab",
-  "textures": {
-    "bottom": "cinderscapes:block/scorched_planks",
-    "top": "cinderscapes:block/scorched_planks",
-    "side": "cinderscapes:block/scorched_planks"
-  }
-}

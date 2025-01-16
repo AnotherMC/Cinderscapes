@@ -2,10 +2,12 @@ package com.terraformersmc.cinderscapes.init;
 
 import com.terraformersmc.cinderscapes.init.helpers.CinderscapesRegistry;
 import net.fabricmc.fabric.api.registry.CompostingChanceRegistry;
+import net.minecraft.component.type.ConsumableComponents;
 import net.minecraft.component.type.FoodComponent;
 import net.minecraft.entity.effect.StatusEffectInstance;
 import net.minecraft.entity.effect.StatusEffects;
 import net.minecraft.item.*;
+import net.minecraft.item.consume.ApplyEffectsConsumeEffect;
 
 public class CinderscapesItems {
 
@@ -174,20 +176,20 @@ public class CinderscapesItems {
         // Other //
         ///////////
 
-        ASH_PILE = CinderscapesRegistry.register("ash_pile", new Item(new Item.Settings()));
+        ASH_PILE = CinderscapesRegistry.register("ash_pile", Item::new, new Item.Settings());
 
-        BRAMBLE_BERRIES = CinderscapesRegistry.register("bramble_berries", new AliasedBlockItem(CinderscapesBlocks.BRAMBLE_BERRY_BUSH, new Item.Settings().food(new FoodComponent.Builder().nutrition(2).saturationModifier(0.1F).alwaysEdible().snack().statusEffect(new StatusEffectInstance(StatusEffects.FIRE_RESISTANCE, 600, 0), 0.8F).build())));
+        BRAMBLE_BERRIES = CinderscapesRegistry.register("bramble_berries", settings -> new BlockItem(CinderscapesBlocks.BRAMBLE_BERRY_BUSH, settings.useItemPrefixedTranslationKey()), new Item.Settings().food(new FoodComponent.Builder().nutrition(2).saturationModifier(0.1F).alwaysEdible().build(), ConsumableComponents.food().consumeEffect(new ApplyEffectsConsumeEffect(new StatusEffectInstance(StatusEffects.FIRE_RESISTANCE, 600, 0), 0.8F)).build()));
 
         NODZOL = CinderscapesRegistry.registerBlockItem("nodzol", CinderscapesBlocks.NODZOL);
 
-        SULFUR = CinderscapesRegistry.register("sulfur", new Item(new Item.Settings()));
+        SULFUR = CinderscapesRegistry.register("sulfur", Item::new, new Item.Settings());
 
         SULFUR_BLOCK = CinderscapesRegistry.registerBlockItem("sulfur_block", CinderscapesBlocks.SULFUR_BLOCK);
         SULFUR_ORE = CinderscapesRegistry.registerBlockItem("sulfur_ore", CinderscapesBlocks.SULFUR_ORE);
 
-        ROSE_QUARTZ = CinderscapesRegistry.register("rose_quartz", new Item(new Item.Settings()));
-        SMOKY_QUARTZ = CinderscapesRegistry.register("smoky_quartz", new Item(new Item.Settings()));
-        SULFUR_QUARTZ = CinderscapesRegistry.register("sulfur_quartz", new Item(new Item.Settings()));
+        ROSE_QUARTZ = CinderscapesRegistry.register("rose_quartz", Item::new, new Item.Settings());
+        SMOKY_QUARTZ = CinderscapesRegistry.register("smoky_quartz", Item::new, new Item.Settings());
+        SULFUR_QUARTZ = CinderscapesRegistry.register("sulfur_quartz", Item::new, new Item.Settings());
 
         ///////////////////
         // Quartz Cavern //

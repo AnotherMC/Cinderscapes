@@ -59,7 +59,7 @@ public class LuminousGroveBiome {
         GenerationSettings.LookupBackedBuilder builder = new GenerationSettings.LookupBackedBuilder(placedFeatures, configuredCarvers);
 
         // DEFAULT MINECRAFT FEATURES
-        builder.carver(GenerationStep.Carver.AIR, ConfiguredCarvers.NETHER_CAVE);
+        builder.carver(ConfiguredCarvers.NETHER_CAVE);
         builder.feature(GenerationStep.Feature.UNDERGROUND_DECORATION, NetherPlacedFeatures.GLOWSTONE_EXTRA);
         builder.feature(GenerationStep.Feature.UNDERGROUND_DECORATION, NetherPlacedFeatures.GLOWSTONE);
         builder.feature(GenerationStep.Feature.UNDERGROUND_DECORATION, OrePlacedFeatures.ORE_MAGMA);

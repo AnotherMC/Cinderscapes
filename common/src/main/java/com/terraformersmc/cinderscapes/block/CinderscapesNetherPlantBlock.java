@@ -16,7 +16,7 @@ import net.minecraft.world.BlockView;
 public class CinderscapesNetherPlantBlock extends PlantBlock {
     public static final MapCodec<CinderscapesNetherPlantBlock> CODEC = CinderscapesNetherPlantBlock.createCodec(CinderscapesNetherPlantBlock::new);
 
-    public CinderscapesNetherPlantBlock(Settings settings, StateShapeSupplier supplier) {
+    public CinderscapesNetherPlantBlock(StateShapeSupplier supplier, Settings settings) {
         super(settings.offset(AbstractBlock.OffsetType.XZ));
 
         StateShapeRegistry.put(this, supplier);
@@ -37,7 +37,6 @@ public class CinderscapesNetherPlantBlock extends PlantBlock {
     }
 
     @Override
-    @SuppressWarnings("deprecation")
     public VoxelShape getOutlineShape(BlockState state, BlockView world, BlockPos pos, ShapeContext context) {
         return StateShapeRegistry.getShape(state);
     }
